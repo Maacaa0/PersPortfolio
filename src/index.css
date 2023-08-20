@@ -171,11 +171,11 @@ h1 {
 }
 
 .basic_info::before {
-  content: url(images/person.svg);
+  content: url(/images/person.svg);
 }
 
 .hobbys_info::before {
-  content: url(images/hearth.svg);
+  content: url(/images/hearth.svg);
 }
 
 .highlight {
