@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import Links from './components/Links'
 import './index.css'
 

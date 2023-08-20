@@ -1,18 +1,8 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState } from 'react'
 
 function Links() {
 
   const [activeLink, setActiveLink] = useState<string>("ABOUT")
-
-    
-  const anchorRef = useRef(null);
-
-  useEffect(() => {
-    // Simulate a click on the element on page load
-    if (anchorRef.current) {
-      anchorRef.current.click();
-    }
-  }, []);
 
   function setLink(e: React.MouseEvent<HTMLAnchorElement>) {
     const anchorElement = e?.currentTarget as HTMLAnchorElement
@@ -26,7 +16,7 @@ function Links() {
     <>
       <ul className="section_selection">
           <li className={activeLink === "ABOUT" ? "underline" : ""}>
-              <a ref={anchorRef} id='ABOUT' href="#s1" onClick={setLink}>ABOUT ME</a>
+              <a id='ABOUT' href="#s1" onClick={setLink}>ABOUT ME</a>
           </li>
 
           <li className={activeLink === "SKILLS" ? "underline" : ""}>
