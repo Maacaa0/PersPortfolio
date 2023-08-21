@@ -1,32 +1,40 @@
 import { useState } from 'react'
 
+interface elemProps {
+  id: string,
+  name: string,
+  decription?: string
+
+}
+
 function Links() {
 
-  const [activeLink, setActiveLink] = useState<string>("ABOUT")
+  const [activeBtn, setActiveBtn] = useState<string>("s1")
 
-  function setLink(e: React.MouseEvent<HTMLAnchorElement>) {
-    const anchorElement = e?.currentTarget as HTMLAnchorElement
-    const anchorId = anchorElement.id
-    if (anchorId) {
-        setActiveLink(anchorId)
-    }
-  }
+const elements: elemProps[] = ([
+      { id: 's1', name: 'ABOUT ME'},
+      { id: 's2', name: 'SKILLS'},
+      { id: 's3', name: 'PROJECTS'}
+    ])
+
+const scrollToElement = (id: string) => {
+    const container: HTMLElement | null = document.getElementById(id);
+    container.scrollIntoView({ behavior: 'smooth' });
+    setActiveBtn(id)
+};
 
   return (
     <>
       <ul className="section_selection">
-          <li className={activeLink === "ABOUT" ? "underline" : ""}>
-              <a id='ABOUT' href="#s1" onClick={setLink}>ABOUT ME</a>
-          </li>
-
-          <li className={activeLink === "SKILLS" ? "underline" : ""}>
-              <a id='SKILLS' href="#s2" onClick={setLink}>SKILLS</a>
-          </li>
-
-          <li className={activeLink === "PROJECTS" ? "underline" : ""}>
-              <a id='PROJECTS' href="#s3" onClick={setLink}>PROJECTS</a>
-          </li>
-        </ul>
+                    {elements.map((element, index) => (
+                        <button key={index}
+                                onClick={() => scrollToElement(element.id)}
+                                className={element.id === activeBtn ? "underline" : ""}
+                        >
+                            {element.name}
+                        </button>
+                    ))}
+      </ul>
         <div className="socials">
           <a href="https://github.com/Maacaa0" target='_blank' className="socials_icon">
             <img src="images/github.svg" alt="github icon" />
@@ -40,3 +48,19 @@ function Links() {
 }
 
 export default Links
+
+
+
+{/* <ul className="section_selection">
+          <li className={activeLink === "ABOUT" ? "underline" : ""}>
+              <a id='ABOUT' href="#s1" onClick={setLink}>ABOUT ME</a>
+          </li>
+
+          <li className={activeLink === "SKILLS" ? "underline" : ""}>
+              <a id='SKILLS' href="#s2" onClick={setLink}>SKILLS</a>
+          </li>
+
+          <li className={activeLink === "PROJECTS" ? "underline" : ""}>
+              <a id='PROJECTS' href="#s3" onClick={setLink}>PROJECTS</a>
+          </li>
+        </ul> */}

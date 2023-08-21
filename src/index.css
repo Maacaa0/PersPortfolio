@@ -20,7 +20,7 @@
 
 :root {
   font-family: "Roboto Mono", "Roboto Slab", sans-serif;
-  overflow: hidden;
+  /* overflow: hidden; */
 
 
   font-synthesis: none;
@@ -41,13 +41,19 @@ main {
   
 }
 
-a {
+/* a {
   color: inherit;
   text-decoration: none;
 }
 
 a:visited {
   color: inherit;
+} */
+
+button {
+  appearance: none;
+  border: none;
+  background: none;
 }
 
 .section_selection {
@@ -56,7 +62,6 @@ a:visited {
   gap: 1.5rem;
   list-style: none;
   color: var(--text-basic-dark);
-
   top: 2rem;
   left: 50%;
   transform: translate(-50%);
@@ -66,7 +71,10 @@ a:visited {
   -o-transform: translate(-50%);
 }
 
-li {
+button {
+  font-size: 1.1rem;
+  font-family: inherit;
+  color: inherit;
   padding-bottom: .3rem;
   border-bottom: 3px solid transparent;
   transition: 175ms ease-in;
@@ -74,9 +82,10 @@ li {
   -moz-transition: 175ms ease-in;
   -ms-transition: 175ms ease-in;
   -o-transition: 175ms ease-in;
+  cursor: pointer;
 }
 
-li:hover {
+button:hover {
   transform: translateY(-2px);
   -webkit-transform: translateY(-2px);
   -moz-transform: translateY(-2px);
