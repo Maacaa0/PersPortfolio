@@ -3,9 +3,17 @@ import './index.css'
 
 function App() {
 
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
+    <>
+      <Links scrollToSection={scrollToSection} />
     <main>
-      <Links />
       <section id='s1' className='section-1'>
         <article>
           <h2>my name is</h2>
@@ -27,11 +35,12 @@ function App() {
 
 
       </section>
-      <div className="fill"></div>
+      {/* <div className="fill"></div> */}
       <section id='s2' className='section-2'></section>
-      <div className="fill"></div>
+      {/* <div className="fill"></div> */}
       <section id='s3' className='section-3'></section>
     </main>
+    </>
   )
 }
 

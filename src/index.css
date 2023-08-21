@@ -28,13 +28,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  max-height: 100vh;
 }
 
 main {
   position: relative;
   max-height: 100vh;
-  width: 700%;
+  width: 300%;
   display: flex;
 
   scroll-snap-type: mandatory;
@@ -42,14 +41,14 @@ main {
   
 }
 
-/* a {
+a {
   color: inherit;
   text-decoration: none;
 }
 
 a:visited {
   color: inherit;
-} */
+}
 
 button {
   appearance: none;
@@ -59,6 +58,7 @@ button {
 
 .section_selection {
   position: fixed;
+  z-index: 1;
   display: flex;
   gap: 1.5rem;
   list-style: none;
@@ -70,6 +70,7 @@ button {
   -moz-transform: translate(-50%);
   -ms-transform: translate(-50%);
   -o-transform: translate(-50%);
+  -webkit-backface-visibility: hidden;
 }
 
 button {
@@ -140,11 +141,12 @@ section {
 }
 
 article {
-  width: 70%;
+  position: relative;
+  top: 13rem;
+  transform: translateY(-8rem);
   height: 80vh;
-  margin: 8rem auto;
-  padding-left: 3rem;
-  overflow-y: scroll;
+  padding-left: 8rem;
+  overflow-y: auto;
 }
 
 article::-webkit-scrollbar {
