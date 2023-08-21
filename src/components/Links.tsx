@@ -19,7 +19,7 @@ const elements: elemProps[] = ([
 
 const scrollToElement = (id: string) => {
     const container: HTMLElement | null = document.getElementById(id);
-    container.scrollIntoView({ behavior: 'smooth' });
+    container?.scrollIntoView({ behavior: 'smooth' });
     setActiveBtn(id)
 };
 
