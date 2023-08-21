@@ -11,24 +11,30 @@ function Links() {
 
   const [activeBtn, setActiveBtn] = useState<string>("s1")
 
-const elements: elemProps[] = ([
+  const elements: elemProps[] = ([
       { id: 's1', name: 'ABOUT ME'},
       { id: 's2', name: 'SKILLS'},
       { id: 's3', name: 'PROJECTS'}
     ])
 
-const scrollToElement = (id: string) => {
-    const container: HTMLElement | null = document.getElementById(id);
-    container?.scrollIntoView({ behavior: 'smooth' });
-    setActiveBtn(id)
-};
+      const scrollToElement = (id: string) => {
+        const container: HTMLElement | null = document.getElementById(id);
+        container?.scrollIntoView({ behavior: 'smooth' });
+        setActiveBtn(id);
+      };
+    
+      function handleLinkClick(sectionIndex: string, event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+        event.preventDefault();
+        scrollToElement(sectionIndex);
+        setActiveBtn(sectionIndex);
+      }
 
   return (
     <>
       <ul className="section_selection">
                     {elements.map((element, index) => (
                         <button key={index}
-                                onClick={() => scrollToElement(element.id)}
+                                onClick={(event) => handleLinkClick(element.id, event)}
                                 className={element.id === activeBtn ? "underline" : ""}
                         >
                             {element.name}
