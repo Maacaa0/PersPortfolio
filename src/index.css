@@ -33,11 +33,7 @@
 main {
   position: relative;
   max-height: 100vh;
-  width: 300%;
-  display: flex;
-
-  scroll-snap-type: mandatory;
-  scroll-snap-align: center;
+  width: 100%;
   
 }
 
