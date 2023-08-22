@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Links from './components/Links'
 import './index.css'
 
@@ -10,14 +11,27 @@ function App() {
     }
   };
 
+  const [isCopied, setIsCopied] = useState<boolean>(false);
+
+  const copyToClipBoard = () => {
+    const textToCopy = "hesss.marcel@gmail.com"
+
+    navigator.clipboard.writeText(textToCopy)
+
+    setIsCopied(true);
+
+    setTimeout(() => {
+      setIsCopied(false);
+    }, 2000); // Display the confirmation for 2 seconds
+  }
+
   return (
-    <>
-      <Links scrollToSection={scrollToSection} />
     <main>
+      <Links scrollToSection={scrollToSection} />
       <section id='s1' className='section-1'>
         <article>
           <h2>my name is</h2>
-          <h1><span className='highlight closer_span'>&#91;</span> Marcel HESS <span className='highlight closer_span'>&#93;</span></h1>
+          <h1>Marcel HESS</h1>
 
           <p className='basic_info about_para'>
           I am self-taught junior front-end developer eager for first web developer job. <br /> <br />
@@ -39,8 +53,18 @@ function App() {
       <section id='s2' className='section-2'></section>
       {/* <div className="fill"></div> */}
       <section id='s3' className='section-3'></section>
+      <div className="socials">
+        {isCopied && <div className='confirmation_box'>Email copied to Clipboard!</div>}
+        <a className='socials_icon email_icon' onClick={copyToClipBoard}> <img src="images/email.svg" alt="email icon" />
+        </a>
+          <a href="https://github.com/Maacaa0" target='_blank' className="socials_icon">
+            <img src="images/github.svg" alt="github icon" />
+          </a>
+          <a href="https://www.linkedin.com/in/marcel-hess-35a081257/" target='_blank' className="socials_icon">
+            <img src="images/linkedin.svg" alt="linkedin icon" />
+          </a>
+        </div>
     </main>
-    </>
   )
 }
 
