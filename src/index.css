@@ -4,7 +4,7 @@
 :root {
   --bg-s1-dark: #374151;
   --bg-s2-dark: #513737;
-  --bg-s3-dark: #415137;
+  --bg-s3-dark: #404040;
 
   --text-basic-dark: #CBD5E1;
   --highlight-clr: #f59e0b;
@@ -59,7 +59,7 @@ a {
   gap: 1.5rem;
   list-style: none;
   color: var(--text-basic-dark);
-  /* top: 0rem; */
+
   /* testing */
   background: rgba(0, 0, 0, 0.605);
   width: 100%;
@@ -93,7 +93,7 @@ a {
   position: fixed;
   display: flex;
   bottom: 1rem;
-  right: -2rem;
+  right: -3rem;
   transform: translate(-50%);
   -webkit-transform: translate(-50%);
   -moz-transform: translate(-50%);
@@ -103,8 +103,8 @@ a {
 
 .socials_icon {
   display: block;
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   transition: 250ms ease-in-out;
   -webkit-transition: 250ms ease-in-out;
   -moz-transition: 250ms ease-in-out;
