@@ -3,7 +3,7 @@
 
 :root {
   --bg-s1-dark: #374151;
-  --bg-s2-dark: #375146;
+  --bg-s2-dark: #323234;
   --bg-s3-dark: #404040;
 
   --text-basic-dark: #CBD5E1;
@@ -74,8 +74,6 @@ a {
 
 
 .underline {
-  /* border-bottom: 3px solid var(--highlight-clr); */
-
   color: black;
   background: var(--highlight-clr);
   padding: 0.3rem 10%;
@@ -143,8 +141,16 @@ h1::after {
   content: url(/images/hearth.svg);
 }
 
+.skills_text::before {
+  content: url(/images/code.svg);
+}
+
 .highlight {
   color: var(--highlight-clr)
+}
+
+.highlight_red {
+  color: #FF0000;
 }
 
 .divider {
@@ -174,6 +180,21 @@ h1::after {
 .section-2 {
   background: var(--bg-s2-dark);
 }
+
+.skills {
+  padding: 1rem;
+  padding-left: 2.8rem;
+}
+
+.skills_heading {
+  margin-top: 3rem;
+}
+
+.skills_heading::before {
+  content: url(images/list.svg);
+  margin-top: -.5rem;
+}
+
 
 .section-3 {
   background: var(--bg-s3-dark);
@@ -276,7 +297,7 @@ h1::after {
 }
 
 .project_info {
-  max-width: 75%;
+  max-width: 80%;
   display: block;
 }
 
@@ -318,6 +339,17 @@ h1::after {
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
+}
+
+.overlay_page {
+  border-radius: 0;
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  width: 100%;
+  background: #000000b0;
+  height: 100vh;
+  -webkit-backface-visibility: hidden;
 }
 
 .show-test {
@@ -375,10 +407,17 @@ h1::after {
 
 .confirmation_box {
   position: absolute;
+  padding: .2rem .5rem;
+  background: black;
   font-size: .6rem;
-  top: -1rem;
-  left: -2rem;
+  border-radius: .3rem;
+  top: -1.5rem;
+  left: -2.7rem;
   color: var(--text-basic-dark);
+  -webkit-border-radius: .3rem;
+  -moz-border-radius: .3rem;
+  -ms-border-radius: .3rem;
+  -o-border-radius: .3rem;
 }
 
 

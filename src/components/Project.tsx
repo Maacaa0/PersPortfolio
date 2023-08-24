@@ -9,6 +9,7 @@ interface ProjectProps {
   imgSrc: string;
   isShown: boolean,
   toggleProject: any,
+  closeProject: any
 }
 
 const Project: React.FC<ProjectProps> = (props) => {
@@ -27,8 +28,8 @@ const Project: React.FC<ProjectProps> = (props) => {
       </article>
 
         {/* --------CARD TO SHOW ON CLICK----------- */}
-
-      {props.isShown && <article  onClick={()=>props.toggleProject(props.id)} className={props.isShown ? "show-project projects in" : "show-project projects out"}>
+      {props.isShown && <div onClick={props.closeProject} className='overlay_page'></div>}
+      {props.isShown && <article  onClick={()=>props.toggleProject(props.id)} className="show-project projects">
         <h3 className='project_name'>{props.projectName}</h3>
         <img className='project_img' src={props.imgSrc} alt="" />
         <div className="project_bottom_container">

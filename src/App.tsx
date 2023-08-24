@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Links from './components/Links'
 import Project from './components/Project';
+import Socials from './components/Socials';
 import './index.css'
 import projectData from "./projectData"
 
@@ -16,26 +17,20 @@ function App() {
     }
   };
   
-  const [isCopied, setIsCopied] = useState<boolean>(false);
-  
-  const copyToClipBoard = () => {
-    const textToCopy = "hesss.marcel@gmail.com"
-    
-    navigator.clipboard.writeText(textToCopy)
-    
-    setIsCopied(true);
-    
-    setTimeout(() => {
-      setIsCopied(false);
-    }, 2000); // Display the confirmation for 2 seconds
-  }
-
   const toggleProject = (id: number) => {
     setProjectArr(prevState => {
       return prevState.map(project => {
         return project.id === id ? {...project, isShown: !project.isShown} : {...project, isShown: false}
       })
     }) 
+  }
+
+  const closeProject = () => {
+    setProjectArr(prevState => {
+      return prevState.map(project => {
+        return {...project, isShown: false}
+      })
+    })
   }
   
   const projects = projectArr.map(project => {
@@ -49,6 +44,7 @@ function App() {
                key={project.id}
                id={project.id}
                toggleProject={toggleProject}
+               closeProject={closeProject}
                 />
     )
   })
@@ -76,31 +72,30 @@ function App() {
           Nature inspires me and brings me peace. In my spare time, I enjoy reading.
           </p>
         </article>
-
-
       </section>
-      <section id='s2' className='section-2'></section>
+
+
+      <section id='s2' className='section-2'>
+        <article className='skills'>
+          <p className="skills_text about_para">
+            I started learning front-end development in early 2022. I've been using <span className='highlight_red'>YouTube</span> tutorials and <span className="highlight">FreeCodeCamp</span> to learn, and I'm also practicing my skills with challenges from <span className="highlight">Frontend Mentor</span> and <span className="highlight_red">Codewars</span>.
+          </p>
+
+          <h3 className='skills_heading about_para'>Tech Stack</h3>
+        </article>
+      </section>
 
 
       <section id='s3' className='section-3'>
-
+      <p className="projects_text">Here are some of my <span className='highlight'>Projects</span> I coded to practice and harden my skills.</p>
+      <small className="highlight">Click / Tap on project card to show more info</small>
         {projects}
 
       </section>
 
+      <Socials />
 
-
-      <div className="socials">
-        {isCopied && <div className='confirmation_box'>E-mail copied to Clipboard!</div>}
-        <a className='socials_icon email_icon' onClick={copyToClipBoard}> <img src="images/email.svg" alt="email icon" />
-        </a>
-          <a href="https://github.com/Maacaa0" target='_blank' className="socials_icon">
-            <img src="images/github.svg" alt="github icon" />
-          </a>
-          <a href="https://www.linkedin.com/in/marcel-hess-35a081257/" target='_blank' className="socials_icon">
-            <img src="images/linkedin.svg" alt="linkedin icon" />
-          </a>
-        </div>
+      
     </main>
   )
 }
