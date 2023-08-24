@@ -36,14 +36,6 @@ function App() {
         return project.id === id ? {...project, isShown: !project.isShown} : {...project, isShown: false}
       })
     }) 
-
-    const closeProject = () => {
-      console.log("id is:", id)
-    } 
-
-    window.addEventListener('click', closeProject)
-    closeProject()
-    window.removeEventListener('click', closeProject)
   }
   
   const projects = projectArr.map(project => {
