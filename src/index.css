@@ -3,7 +3,7 @@
 
 :root {
   --bg-s1-dark: #374151;
-  --bg-s2-dark: #513737;
+  --bg-s2-dark: #375146;
   --bg-s3-dark: #404040;
 
   --text-basic-dark: #CBD5E1;
@@ -53,7 +53,7 @@ a {
 
 .section_selection {
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   display: flex;
   white-space: nowrap;
   gap: 1.5rem;
@@ -89,49 +89,6 @@ a {
   -o-border-radius: 6px;
 }
 
-.socials {
-  position: fixed;
-  display: flex;
-  bottom: 1rem;
-  right: -3rem;
-  transform: translate(-50%);
-  -webkit-transform: translate(-50%);
-  -moz-transform: translate(-50%);
-  -ms-transform: translate(-50%);
-  -o-transform: translate(-50%);
-}
-
-.socials_icon {
-  display: block;
-  width: 2.5rem;
-  height: 2.5rem;
-  transition: 250ms ease-in-out;
-  -webkit-transition: 250ms ease-in-out;
-  -moz-transition: 250ms ease-in-out;
-  -ms-transition: 250ms ease-in-out;
-  -o-transition: 250ms ease-in-out;
-  opacity: .6;
-  cursor: pointer;
-}
-
-.socials_icon:hover {
-  filter: drop-shadow(1px 1px 3px rgba(177, 177, 177, 0.632));
-  -webkit-filter: drop-shadow(1px 1px 3px rgba(177, 177, 177, 0.632));
-  transform: scale(1.05);
-  -webkit-transform: scale(1.05);
-  -moz-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  -o-transform: scale(1.05);
-  opacity: 1;
-}
-
-.confirmation_box {
-  position: absolute;
-  font-size: .6rem;
-  top: -2rem;
-  left: -1rem;
-  color: var(--text-basic-dark);
-}
 
 section {
   min-height: 100vh;
@@ -140,18 +97,6 @@ section {
   color: var(--text-basic-dark);
 
   padding: 2rem;
-}
-
-article {
-  position: relative;
-  top: 10rem;
-  padding: 1rem;
-  padding-left: 2.8rem;
-  -webkit-transform: translateY(-8rem);
-  -moz-transform: translateY(-8rem);
-  -ms-transform: translateY(-8rem);
-  -o-transform: translateY(-8rem);
-
 }
 
 
@@ -172,13 +117,13 @@ h1 {
 
 h1::before {
   content: "[";
-  margin-right: .2rem;
+  margin-right: .4rem;
   color: var(--highlight-clr);
 }
 
 h1::after {
   content: "]";
-  margin-left: .2rem;
+  margin-left: .4rem;
   color: var(--highlight-clr);
 }
 
@@ -218,10 +163,221 @@ h1::after {
   background: var(--bg-s1-dark);
 }
 
+.section-1 > article {
+  position: relative;
+  top: 10rem;
+  padding: 1rem;
+  padding-left: 2.8rem;
+  -webkit-transform: translateY(-8rem);
+  -moz-transform: translateY(-8rem);
+  -ms-transform: translateY(-8rem);
+  -o-transform: translateY(-8rem);
+}
+
 .section-2 {
   background: var(--bg-s2-dark);
 }
 
 .section-3 {
   background: var(--bg-s3-dark);
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-content: center;
 }
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  position: relative;
+  width: calc(50% - 10px);
+  height: 40vw;
+  background-size: cover;
+  background-position: center;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+
+  transition: 400ms ease;
+  -webkit-transition: 400ms ease;
+  -moz-transition: 400ms ease;
+  -ms-transition: 400ms ease;
+  -o-transition: 400ms ease;
+
+  cursor: pointer;
+}
+
+.projects:hover .overlay {
+  backdrop-filter: none;
+}
+
+.projects:hover .project_btn {
+  display: block;
+}
+
+.projects.show-project {
+  position: absolute;
+  z-index: 50;
+  width: 80%;
+  height: 100vw;
+  
+  font-size: 150%;
+}
+
+.projects.show-project .project_name {
+  font-size: 110%;
+}
+
+.projects.show-project .project_bottom_container {
+  font-size: 80%;
+}
+
+.show-project.overlay {
+  display: none;
+}
+
+.project_name {
+  font-size: .9rem;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0.2rem 0.3rem;
+  margin-top: 0.4rem;
+
+  position: relative;
+  z-index: 10;
+}
+
+.project_bottom_container {
+  background: rgba(0, 0, 0, 0.8);
+  padding: .5rem;
+
+  position: relative;
+  z-index: 10;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-size: .6rem;
+}
+
+.project_info {
+  max-width: 75%;
+  display: block;
+}
+
+.project_links_container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.link_ico {
+  vertical-align: middle;
+  margin-right: .5rem;
+  width: 1.1rem;
+}
+
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #0000008a;
+  z-index: 1;
+  backdrop-filter: blur(2px) brightness(0.4);
+
+  transition: 250ms ease;
+  -webkit-transition: 250ms ease;
+  -moz-transition: 250ms ease;
+  -ms-transition: 250ms ease;
+  -o-transition: 250ms ease;
+
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+
+ /* BOTTOM */
+.socials {
+  position: fixed;
+  display: flex;
+  bottom: 1rem;
+  right: -3rem;
+  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  -o-transform: translate(-50%);
+}
+
+.socials_icon {
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  transition: 250ms ease-in-out;
+  -webkit-transition: 250ms ease-in-out;
+  -moz-transition: 250ms ease-in-out;
+  -ms-transition: 250ms ease-in-out;
+  -o-transition: 250ms ease-in-out;
+  opacity: .6;
+  cursor: pointer;
+}
+
+.socials_icon:hover {
+  filter: drop-shadow(1px 1px 3px rgba(177, 177, 177, 0.632));
+  -webkit-filter: drop-shadow(1px 1px 3px rgba(177, 177, 177, 0.632));
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  opacity: 1;
+}
+
+.confirmation_box {
+  position: absolute;
+  font-size: .6rem;
+  top: -1rem;
+  left: -2rem;
+  color: var(--text-basic-dark);
+}
+
+
+
+
+/* MISC */
+
+.typewriter {
+  width: max-content;
+  margin-bottom: 3rem;
+}
+
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .05em; 
+  /* Adjust as needed */
+  animation: 
+    typing 650ms steps(150, end)
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+} */
