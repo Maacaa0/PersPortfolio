@@ -13,15 +13,10 @@ interface ProjectProps {
 
 const Project: React.FC<ProjectProps> = (props) => {
 
-
-  const styles: React.CSSProperties = {
-    backgroundImage: `url(${props.imgSrc})`
-  };
-
   return (
-      <article onClick={()=>props.toggleProject(props.id)} className={props.isShown ? "show-project projects" : "projects"} style={styles} >
+      <article onClick={()=>props.toggleProject(props.id)} className={props.isShown ? "show-project projects" : "projects"} >
         <h3 className='project_name'>{props.projectName}</h3>
-
+        <img className='project_img' src={props.imgSrc} alt="" />
         <div className="project_bottom_container">
           <small className='project_info'>{props.projectInfo}</small>
 
