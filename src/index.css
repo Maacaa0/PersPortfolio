@@ -224,8 +224,9 @@ h1::after {
 .projects.show-project {
   position: absolute;
   z-index: 50;
-  width: 80%;
+  width: 90%;
   height: 100vw;
+  align-self: center;
   
   font-size: 150%;
 }
@@ -238,7 +239,7 @@ h1::after {
   font-size: 80%;
 }
 
-.show-project.overlay {
+.projects.show-project .overlay {
   display: none;
 }
 
