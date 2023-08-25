@@ -141,8 +141,12 @@ h1::after {
   content: url(/images/hearth.svg);
 }
 
-.skills_text::before {
+.code::before {
   content: url(/images/code.svg);
+}
+
+.lightbulb::before {
+  content: url(/images/lightbulb.svg);
 }
 
 .highlight {
@@ -151,6 +155,14 @@ h1::after {
 
 .highlight_red {
   color: #FF0000;
+}
+
+.highlight_lightBlue {
+  color: #38BDF8;
+}
+
+.highlight_darkBlue {
+  color: #3B82F6;
 }
 
 .divider {
@@ -181,20 +193,68 @@ h1::after {
   background: var(--bg-s2-dark);
 }
 
-.skills {
+.skills_article {
   padding: 1rem;
   padding-left: 2.8rem;
 }
 
-.skills_heading {
+.skills_text {
   margin-top: 3rem;
+  line-height: 1.4rem;
+}
+
+.skills_heading {
+  position: relative;
+  font-size: 1.5rem;
+  margin-top: 2rem;
 }
 
 .skills_heading::before {
-  content: url(images/list.svg);
-  margin-top: -.5rem;
+  content: url(/images/toolbox.svg);
+  position: absolute;
+  left: -3.5rem;
+  top: -0.6rem;
+  transform: scale(.65);
+  -webkit-transform: scale(.65);
+  -moz-transform: scale(.65);
+  -ms-transform: scale(.65);
+  -o-transform: scale(.65);
 }
 
+.icons_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem;
+
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.ico_wrapper {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+
+.icon_name {
+  position: absolute;
+  top: -1.8rem;
+  width: auto;
+  padding: .1rem .6rem;
+  text-align: center;
+  background: black;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+
+.skills_icon {
+  width: 10vw;
+  max-width: 6rem;
+}
 
 .section-3 {
   background: var(--bg-s3-dark);
@@ -245,7 +305,6 @@ h1::after {
   position: absolute;
   z-index: 50;
   width: 90%;
-  /* height: 100vw; */
   align-self: center;
   
   font-size: 150%;
