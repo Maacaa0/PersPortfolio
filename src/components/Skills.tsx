@@ -41,12 +41,12 @@ interface SkillsProps {
         <article className="skills_article">
 
             <h4 className="skills_heading">Tech Stack</h4>
-    
+
             <div className="icons_container">
              {skills}
             </div>
 
-            <p className="skills_text about_para code ">I started learning front-end development in early 2022. I've been using <span className="highlight_red">YouTube</span> tutorials and <a href="https://www.freecodecamp.org/" className="highlight">FreeCodeCamp</a> to learn, and I'm also practicing my skills with challenges from <a target="_blank" href="https://www.frontendmentor.io/challenges" className="highlight">Frontend Mentor</a> and <a href="https://www.codewars.com/users/Maacaa0" className="highlight_red">Codewars</a>.</p>
+            <p className="skills_text about_para code ">I started learning front-end development in early 2022. I've been using <span className="highlight_red">YouTube</span> tutorials and <a target="_blank" href="https://www.freecodecamp.org/" className="highlight">FreeCodeCamp</a> to learn, and I'm also practicing my skills with challenges from <a target="_blank" href="https://www.frontendmentor.io/challenges" className="highlight">Frontend Mentor</a> and <a target="_blank" href="https://www.codewars.com/users/Maacaa0" className="highlight_red">Codewars</a>.</p>
 
             <p className="skills_text about_para lightbulb"> I have learned <span className="highlight">HTML</span>, <span className="highlight">CSS</span> and <span className="highlight">Javascript</span> essentials. Now I am on a path to learn <span className="highlight_lightBlue">ReactJs</span> with <span className="highlight_darkBlue">Typescript</span> and <span className="highlight_red">Git</span> to take my skills to the next level.
             </p>

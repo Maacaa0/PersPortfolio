@@ -263,7 +263,7 @@ h1::after {
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
-  align-content: center;
+  align-content: flex-start;
 }
 
 .projects {
@@ -293,6 +293,10 @@ h1::after {
   cursor: pointer;
 }
 
+.projects_text {
+  margin-top: 2rem;
+}
+
 .projects:hover .overlay {
   backdrop-filter: none;
 }
@@ -305,7 +309,7 @@ h1::after {
   position: absolute;
   z-index: 50;
   width: 90%;
-  align-self: center;
+  align-self: flex-start;
   
   font-size: 150%;
 
