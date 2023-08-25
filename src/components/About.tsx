@@ -7,7 +7,7 @@ const About = () => {
             <h1>Marcel HESS</h1>
           </div>
 
-          <p className='basic_info about_para'>
+          <p className='basic_info about_para text'>
           I am self-taught junior front-end developer eager for first web developer job. <br /> <br />
           Passionate about creating impactful websites.  <br /><br />
           Seeking opportunities to learn and contribute.
@@ -15,7 +15,7 @@ const About = () => {
 
           <div className="divider"></div>
 
-          <p className='hobbys_info about_para'>
+          <p className='hobbys_info about_para text'>
           I love sports like running, working out, and swimming to keep myself energized. <br /><br />
           Nature inspires me and brings me peace. In my spare time, I enjoy reading.
           </p>

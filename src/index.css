@@ -131,6 +131,10 @@ h1::after {
   color: var(--highlight-clr);
 }
 
+.text {
+  font-weight: 300;
+}
+
 .about_para {
   position: relative;
   line-height: 1.2rem;
@@ -267,18 +271,13 @@ h1::after {
   max-width: 6rem;
 }
 
-.section-3 {
-  position: relative;
-  display: grid;
-  grid-template-columns: minmax(10rem, 18rem) minmax(10rem, 18rem);
-  gap: 2rem;
-  align-content: center;
-  justify-content: center;
-}
+/* .section-3 {
+  
+} */
 
 .projects_top_wrapper {
-  grid-column: span 2;
   text-align: center;
+  margin-bottom: 3rem;
 }
 
 .projects {
@@ -287,11 +286,6 @@ h1::after {
   justify-content: space-between;
 
   position: relative;
-  /* width: calc(50% - 10px);
-  min-height: 50vw;
-  max-width: 50rem;
-  max-height: 50rem; */
-
   overflow: hidden;
  
   border: 1px solid black;
@@ -324,7 +318,7 @@ h1::after {
 
 .projects.show-project {
   position: absolute;
-  top: 8rem;
+  top: -1rem;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -345,7 +339,7 @@ h1::after {
 }
 
 .projects.show-project .project_bottom_container {
-  font-size: 80%;
+  font-size: 75%;
   padding: 1rem;
 }
 
@@ -355,6 +349,15 @@ h1::after {
 
 .project_bottom_container, .project_name {
   background: #3b3b3bc9;
+}
+
+.projects_wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(10rem, 18rem) minmax(10rem, 18rem);
+  gap: 2rem;
+  align-content: center;
+  justify-content: center;
 }
 
 .project_name {
@@ -390,7 +393,7 @@ h1::after {
 .project_links_container {
   display: flex;
   justify-content: space-between;
-  font-size: 1rem;
+  font-size: .8rem;
   padding-top: 1rem;
   border-top: 1px solid white;
 }
@@ -540,15 +543,28 @@ h1::after {
 
 @media (min-width: 600px) {
 
+  h2 {
+    font-size: 2rem;
+  }
 
-  .section-3 {
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  .text {
+    font-size: 1.2rem;
+    
+  }
+
+  .projects_wrapper {
     justify-content: start;
     grid-template-columns: repeat(auto-fit,minmax(10rem,20rem));
+    align-items: stretch;
   }
 
   .projects_top_wrapper {
     text-align: left;
-    grid-row: span 4;
+    font-size: 140%;
   }
 
   .project_bottom_container, .project_name {

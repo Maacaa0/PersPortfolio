@@ -58,9 +58,9 @@ function App() {
         <p className="projects_text">Here are some of my <span className='highlight'>Projects</span> I coded to practice and harden my skills.</p>
         <small className="highlight">Click / Tap on project card to show more info</small>
       </div>
-
+      <div className="projects_wrapper">
         {projects}
-
+      </div>
       </section>
 
       <Socials />
