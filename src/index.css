@@ -2,10 +2,14 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap'); */
 
 :root {
-  --bg-s1-dark: #374151;
+  --bg-s1-dark: #25272b;
   --bg-s2-dark: #323234;
   --bg-s3-dark: #404040;
-
+  
+  /* --bg-s1-dark: #374151;
+  --bg-s2-dark: #323234;
+  --bg-s3-dark: #404040; */
+  
   --text-basic-dark: #CBD5E1;
   --highlight-clr: #f59e0b;
   
@@ -32,7 +36,10 @@ main {
   position: relative;
   max-height: 100vh;
   width: 100%;
-  
+
+  scroll-snap-type: y mandatory;
+
+  overflow-y: auto;
 }
 
 a {
@@ -90,8 +97,10 @@ section {
   width: 100%;
   max-width: 100%;
   color: var(--text-basic-dark);
+  background: var(--bg-s1-dark);
 
   padding: 2rem;
+  scroll-snap-align: start;
 }
 
 
@@ -174,9 +183,9 @@ h1::after {
   background: var(--highlight-clr);
 }
 
-.section-1 {
+/* .section-1 {
   background: var(--bg-s1-dark);
-}
+} */
 
 .section-1 > article {
   position: relative;
@@ -189,9 +198,9 @@ h1::after {
   -o-transform: translateY(-8rem);
 }
 
-.section-2 {
+/* .section-2 {
   background: var(--bg-s2-dark);
-}
+} */
 
 .skills_article {
   padding: 1rem;
@@ -257,8 +266,8 @@ h1::after {
 }
 
 .section-3 {
-  background: var(--bg-s3-dark);
-
+  /* background: var(--bg-s3-dark); */
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -276,6 +285,8 @@ h1::after {
   min-height: 50vw;
   max-width: 50rem;
   max-height: 50rem;
+
+  overflow: hidden;
  
   border: 1px solid black;
   border-radius: 6px;
@@ -307,6 +318,7 @@ h1::after {
 
 .projects.show-project {
   position: absolute;
+  top: 4rem;
   z-index: 50;
   width: 90%;
   align-self: flex-start;
@@ -332,9 +344,12 @@ h1::after {
   display: none;
 }
 
+.project_bottom_container, .project_name {
+  background: #3b3b3bc9;
+}
+
 .project_name {
   font-size: .9rem;
-  background: black;
   padding: .4rem;
 
   position: relative;
@@ -347,7 +362,6 @@ h1::after {
 }
 
 .project_bottom_container {
-  background: black;
   padding: .5rem;
 
   position: relative;
@@ -413,20 +427,6 @@ h1::after {
   background: #000000b0;
   height: 100vh;
   -webkit-backface-visibility: hidden;
-}
-
-.show-test {
-  position: absolute;
-  z-index: 50;
-  width: 90%;
-  /*height: 100vw;*/
-  align-self: center;
-  font-size: 150%;
-  transition: 150ms ;
-  -webkit-transition: 150ms ;
-  -moz-transition: 150ms ;
-  -ms-transition: 150ms ;
-  -o-transition: 150ms ;
 }
 
 
@@ -509,11 +509,6 @@ h1::after {
   to { width: 100% }
 }
 
-/* The typewriter cursor effect
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
-} */
 
 @keyframes bounceIn {
   0% { 

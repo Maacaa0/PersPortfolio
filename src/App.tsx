@@ -11,14 +11,7 @@ import projectData from "./projectData"
 
 function App() {
   const [projectArr, setProjectArr] = useState(projectData)
-  
-  const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-  
+    
   const toggleProject = (id: number) => {
     setProjectArr(prevState => {
       return prevState.map(project => {
@@ -53,7 +46,7 @@ function App() {
   
   return (
     <main>
-      <Links scrollToSection={scrollToSection} />
+      <Links />
       
       <About />
         

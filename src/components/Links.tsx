@@ -1,28 +1,36 @@
 import React, { useState, useEffect } from 'react'
 
-type LinksProps = {
-  scrollToSection: (sectionId: string) => void;
-};
 
-const Links: React.FC<LinksProps> = () => {
+const Links: React.FC = () => {
 
   const [activeSection, setActiveSection] = useState<string>('s1');
 
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = document.querySelectorAll('section');
-      for (const section of sections) {
-        const rect = section.getBoundingClientRect();
-        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-          setActiveSection(section.id);
-          break;
+    const handleIntersection = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
         }
-      }
+      });
     };
-
-    window.addEventListener('scroll', handleScroll);
+  
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5, // Adjust this threshold as needed
+    };
+  
+    const observer = new IntersectionObserver(handleIntersection, options);
+  
+    const sections = document.querySelectorAll('section');
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+  
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      sections.forEach((section) => {
+        observer.unobserve(section);
+      });
     };
   }, []);
 
