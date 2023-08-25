@@ -12,7 +12,7 @@ interface ProjectProps {
   closeProject: any
 }
 
-const Project: React.FC<ProjectProps> = (props) => {
+const Projects: React.FC<ProjectProps> = (props) => {
 
   return (
     <>
@@ -45,4 +45,4 @@ const Project: React.FC<ProjectProps> = (props) => {
       </>
 )};
 
-export default Project;
+export default Projects;

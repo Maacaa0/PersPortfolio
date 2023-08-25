@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Links from './components/Links'
 import About from './components/About';
-import Project from './components/Project';
+import Projects from './components/Projects';
 import Socials from './components/Socials';
 import Skills from './components/Skills';
 import './index.css'
@@ -30,7 +30,7 @@ function App() {
   
   const projects = projectArr.map(project => {
     return (
-      <Project projectName={project.projectName}
+      <Projects projectName={project.projectName}
                projectInfo={project.projectInfo}
                repo={project.repo}
                liveSite={project.liveSite}
@@ -46,7 +46,7 @@ function App() {
   
   return (
     <main>
-      <Links />
+      <Links closeProject={closeProject} />
       
       <About />
         
@@ -54,8 +54,10 @@ function App() {
 
 
       <section id='s3' className='section-3'>
-      <p className="projects_text">Here are some of my <span className='highlight'>Projects</span> I coded to practice and harden my skills.</p>
-      <small className="highlight">Click / Tap on project card to show more info</small>
+      <div className="projects_top_wrapper">
+        <p className="projects_text">Here are some of my <span className='highlight'>Projects</span> I coded to practice and harden my skills.</p>
+        <small className="highlight">Click / Tap on project card to show more info</small>
+      </div>
 
         {projects}
 

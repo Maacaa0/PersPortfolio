@@ -175,7 +175,7 @@ h1::after {
 }
 
 .divider {
-  width: 80%;
+  width: calc(100% - 20px);
   height: 1px;
 
   margin: 2.5rem 0;
@@ -188,6 +188,7 @@ h1::after {
 } */
 
 .section-1 > article {
+  max-width: 30rem;
   position: relative;
   top: 10rem;
   padding: 1rem;
@@ -210,6 +211,7 @@ h1::after {
 .skills_text {
   margin-top: 3rem;
   line-height: 1.4rem;
+  max-width: 30rem;
 }
 
 .skills_heading {
@@ -266,13 +268,17 @@ h1::after {
 }
 
 .section-3 {
-  /* background: var(--bg-s3-dark); */
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: minmax(10rem, 18rem) minmax(10rem, 18rem);
+  gap: 2rem;
+  align-content: center;
   justify-content: center;
-  align-content: flex-start;
+}
+
+.projects_top_wrapper {
+  grid-column: span 2;
+  text-align: center;
 }
 
 .projects {
@@ -281,10 +287,10 @@ h1::after {
   justify-content: space-between;
 
   position: relative;
-  width: calc(50% - 10px);
+  /* width: calc(50% - 10px);
   min-height: 50vw;
   max-width: 50rem;
-  max-height: 50rem;
+  max-height: 50rem; */
 
   overflow: hidden;
  
@@ -318,10 +324,13 @@ h1::after {
 
 .projects.show-project {
   position: absolute;
-  top: 4rem;
+  top: 8rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 30rem;
   z-index: 50;
-  width: 90%;
-  align-self: flex-start;
   
   font-size: 150%;
 
@@ -423,6 +432,7 @@ h1::after {
   position: fixed;
   z-index: 20;
   top: 0;
+  left: 0;
   width: 100%;
   background: #000000b0;
   height: 100vh;
@@ -436,7 +446,7 @@ h1::after {
   z-index: 100;
   display: flex;
   bottom: 1rem;
-  right: -3rem;
+  left: calc(100% - 5rem);
   transform: translate(-50%);
   -webkit-transform: translate(-50%);
   -moz-transform: translate(-50%);
@@ -525,4 +535,32 @@ h1::after {
  100% {
     transform: scale(1);
  }
+}
+
+
+@media (min-width: 600px) {
+
+
+  .section-3 {
+    justify-content: start;
+    grid-template-columns: repeat(auto-fit,minmax(10rem,20rem));
+  }
+
+  .projects_top_wrapper {
+    text-align: left;
+    grid-row: span 4;
+  }
+
+  .project_bottom_container, .project_name {
+    font-size: 1.2rem;
+  }
+
+  .socials {
+    bottom: 3rem;
+    left: calc(100% - 10rem);
+  }
+
+  .socials_icon {
+    width: 4rem;
+  }
 }

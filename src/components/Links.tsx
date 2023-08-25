@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react'
 
+type LinksProps = {
+  closeProject: () => void;
+};
 
-const Links: React.FC = () => {
+const Links: React.FC<LinksProps> = (props:any) => {
 
   const [activeSection, setActiveSection] = useState<string>('s1');
 
@@ -10,18 +13,19 @@ const Links: React.FC = () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           setActiveSection(entry.target.id);
+          props.closeProject()
         }
       });
     };
-  
+    
     const options = {
       root: null,
       rootMargin: '0px',
       threshold: 0.5, // Adjust this threshold as needed
     };
-  
+    
     const observer = new IntersectionObserver(handleIntersection, options);
-  
+    
     const sections = document.querySelectorAll('section');
     sections.forEach((section) => {
       observer.observe(section);
