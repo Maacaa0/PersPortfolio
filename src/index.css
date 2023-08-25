@@ -39,7 +39,7 @@ main {
 
   scroll-snap-type: y mandatory;
 
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 
 a {
@@ -100,7 +100,7 @@ section {
   background: var(--bg-s1-dark);
 
   padding: 2rem;
-  scroll-snap-align: center;
+  scroll-snap-align: start;
 }
 
 
