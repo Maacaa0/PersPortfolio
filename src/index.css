@@ -100,7 +100,7 @@ section {
   background: var(--bg-s1-dark);
 
   padding: 2rem;
-  scroll-snap-align: start;
+  scroll-snap-align: center;
 }
 
 
