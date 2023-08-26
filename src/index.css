@@ -1,5 +1,5 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap'); */
 
 :root {
   --bg-s1-dark: #25272b;
@@ -129,7 +129,7 @@ section {
   font-size: var(--fs-500);
   font-weight: 300;
   position: relative;
-  line-height: 1.5rem;
+  line-height: 1.4rem;
   max-width: 30rem;
 }
 
@@ -536,6 +536,12 @@ h1::after {
  }
 }
 
+
+@media (orientation: landscape) {
+  section {
+    scroll-snap-type: none;
+  }
+}
 
 @media (min-width: 600px) {
 
