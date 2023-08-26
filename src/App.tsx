@@ -55,8 +55,8 @@ function App() {
 
       <section id='s3' className='section-3'>
       <div className="projects_top_wrapper">
-        <p className="projects_text">Here are some of my <span className='highlight'>Projects</span> I coded to practice and harden my skills.</p>
-        <small className="highlight">Click / Tap on project card to show more info</small>
+        <p className="projects_text text">Here are some of my projects I coded to practice and harden my skills.</p>
+        <small className="highlightnt highlight">Click / Tap on project card to show more info</small>
       </div>
       <div className="projects_wrapper">
         {projects}

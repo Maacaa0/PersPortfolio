@@ -1,19 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap');
 
 :root {
   --bg-s1-dark: #25272b;
   --bg-s2-dark: #323234;
   --bg-s3-dark: #404040;
-  
-  /* --bg-s1-dark: #374151;
-  --bg-s2-dark: #323234;
-  --bg-s3-dark: #404040; */
+
   
   --text-basic-dark: #CBD5E1;
   --highlight-clr: #f59e0b;
+
+  --fs-400: .875rem;
+  --fs-500: 1rem;
+  --fs-600: 1.125rem;
+  --fs-700: 1.5rem;
+  --fs-800: 1.875rem;
+  --fs-900: 2.5rem;
   
+  --padding: 2rem;
+  --ico-margin: 1rem;
 }
+
 
 *, *::after, *::before {
   margin: 0;
@@ -42,33 +49,22 @@ main {
   overflow-y: scroll;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-  padding: .3rem;
-  border-bottom: 3px solid transparent;
-  transition: 250ms ease-in;
-  -webkit-transition: 250ms ease-in;
-  -moz-transition: 200ms ease-in;
-  -ms-transition: 250ms ease-in;
-  -o-transition: 250ms ease-in;
-}
+/* NAVBAR */
 
-
-.section_selection {
+nav {
   position: fixed;
   z-index: 100;
+  width: 100%;
+  padding: .3rem;
+
   display: flex;
+  justify-content: space-evenly;
   white-space: nowrap;
   gap: 1.5rem;
+
   list-style: none;
   color: var(--text-basic-dark);
-
-  /* testing */
-  background: rgba(0, 0, 0, 0.605);
-  width: 100%;
-  justify-content: space-evenly;
-  padding: .3rem;
+  background: #1a1a1ae6;
 
   left: 50%;
   transform: translate(-50%);
@@ -79,6 +75,17 @@ a {
   -webkit-backface-visibility: hidden;
 }
 
+.nav_link {
+  color: inherit;
+  padding: .3rem;
+  border-bottom: 3px solid transparent;
+  transition: 250ms ease-in;
+  -webkit-transition: 250ms ease-in;
+  -moz-transition: 200ms ease-in;
+  -ms-transition: 250ms ease-in;
+  -o-transition: 250ms ease-in;
+
+}
 
 .underline {
   color: black;
@@ -91,79 +98,53 @@ a {
   -o-border-radius: 6px;
 }
 
+/* ----------------------------- */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
 section {
   min-height: 100vh;
-  width: 100%;
-  max-width: 100%;
   color: var(--text-basic-dark);
   background: var(--bg-s1-dark);
 
-  padding: 2rem;
+  padding: var(--padding);
   scroll-snap-align: start;
 }
 
-
-h2 {
-  font-size: 1.5rem;
-  font-weight: 400;
-  opacity: .7;
+.svg_wrapper {
+  display: flex;
 }
 
-h1 {
-  font-size: 1.8rem;
-  font-weight: 500;
-
-  margin-bottom: 2.8rem;
-  margin-left: -.2rem;
-  text-shadow: -3px 0px 0px rgba(0, 0, 0, 0.31);
-}
-
-h1::before {
-  content: "[";
-  margin-right: .4rem;
-  color: var(--highlight-clr);
-}
-
-h1::after {
-  content: "]";
-  margin-left: .4rem;
-  color: var(--highlight-clr);
+.svg_icon {
+  margin-right: 1rem;
+  width: 2.5rem;
+  min-width: 1.5rem;
+  vertical-align: sub;
 }
 
 .text {
+  font-size: var(--fs-500);
   font-weight: 300;
-}
-
-.about_para {
   position: relative;
-  line-height: 1.2rem;
+  line-height: 1.5rem;
+  max-width: 30rem;
 }
 
-.about_para::before {
+.text::before {
   position: absolute;
   left: -2.5rem;
   top: 5px;
 }
 
-.basic_info::before {
-  content: url(/images/person.svg);
-}
-
-.hobbys_info::before {
-  content: url(/images/hearth.svg);
-}
-
-.code::before {
-  content: url(/images/code.svg);
-}
-
-.lightbulb::before {
-  content: url(/images/lightbulb.svg);
-}
-
 .highlight {
   color: var(--highlight-clr)
+}
+
+.highlightnt {
+  opacity: .7;
 }
 
 .highlight_red {
@@ -178,70 +159,95 @@ h1::after {
   color: #3B82F6;
 }
 
-.divider {
-  width: calc(100% - 20px);
-  height: 1px;
 
-  margin: 2.5rem 0;
+/* SECTION 1 */
 
-  background: var(--highlight-clr);
-}
-
-/* .section-1 {
-  background: var(--bg-s1-dark);
-} */
-
-.section-1 > article {
+.about {
   max-width: 30rem;
   position: relative;
   top: 10rem;
-  padding: 1rem;
-  padding-left: 2.8rem;
   -webkit-transform: translateY(-8rem);
   -moz-transform: translateY(-8rem);
   -ms-transform: translateY(-8rem);
   -o-transform: translateY(-8rem);
 }
 
-/* .section-2 {
-  background: var(--bg-s2-dark);
-} */
-
-.skills_article {
-  padding: 1rem;
-  padding-left: 2.8rem;
+.typewriter {
+  width: max-content;
+  margin-bottom: 3rem;
 }
 
-.skills_text {
-  margin-top: 3rem;
-  line-height: 1.4rem;
-  max-width: 30rem;
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .05em; 
+  /* Adjust as needed */
+  animation: 
+  typing 650ms steps(150, end)
+}
+
+h2 {
+  font-size: var(--fs-700);
+  font-weight: 400;
+  opacity: .7;
+}
+
+h1 {
+  font-size: var(--fs-800);
+  font-weight: 500;
+  
+  margin-bottom: 2.8rem;
+  margin-left: -.2rem;
+  text-shadow: -3px 0px 0px rgba(0, 0, 0, 0.31);
+}
+
+h1::before {
+  content: "[";
+  margin-right: .5rem;
+  color: var(--highlight-clr);
+}
+
+h1::after {
+  content: "]";
+  margin-left: .5rem;
+  color: var(--highlight-clr);
+}
+
+.divider {
+  width: calc(100% - var(--padding) - 30px);
+  height: 1px;
+
+  margin: 2.5rem 0;
+  margin-left: calc(var(--padding) + var(--ico-margin));
+  background: var(--highlight-clr);
+}
+
+/* -------------------------------------- */
+
+
+/* SECTION 2 */
+.skills_article {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;  
 }
 
 .skills_heading {
   position: relative;
-  font-size: 1.5rem;
+  font-size: var(--fs-700);
+  font-weight: 400;
   margin-top: 2rem;
 }
 
-.skills_heading::before {
-  content: url(/images/toolbox.svg);
-  position: absolute;
-  left: -3.5rem;
-  top: -0.6rem;
-  transform: scale(.65);
-  -webkit-transform: scale(.65);
-  -moz-transform: scale(.65);
-  -ms-transform: scale(.65);
-  -o-transform: scale(.65);
-}
 
 .icons_container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(2.4rem, 4vw));
   gap: .3rem;
 
-  margin-top: 1rem;
+  margin-left: calc(var(--padding) + var(--ico-margin));
+  margin-top: 2rem;
   margin-bottom: 2.5rem;
 }
 
@@ -255,9 +261,7 @@ h1::after {
 .icon_name {
   position: absolute;
   top: -1.8rem;
-  width: auto;
   padding: .1rem .6rem;
-  text-align: center;
   background: black;
   border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -267,17 +271,28 @@ h1::after {
 }
 
 .skills_icon {
-  width: 10vw;
+  width: 100%;
   max-width: 6rem;
 }
 
-/* .section-3 {
-  
-} */
+/* SECTION 3 */
 
 .projects_top_wrapper {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.projects_text {
+  margin-top: 2rem;
+}
+
+.projects_wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(10rem, 18rem) minmax(10rem, 18rem);
+  gap: 1.5rem;
+  align-content: center;
+  justify-content: center;
 }
 
 .projects {
@@ -304,68 +319,62 @@ h1::after {
   cursor: pointer;
 }
 
-.projects_text {
-  margin-top: 2rem;
+.shown_projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  position: absolute;
+  top: -2rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 30rem;
+  z-index: 50;
+  overflow: hidden;
+ 
+  border: 1px solid black;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+
+  transition: 400ms ease;
+  -webkit-transition: 400ms ease;
+  -moz-transition: 400ms ease;
+  -ms-transition: 400ms ease;
+  -o-transition: 400ms ease;
+
+  cursor: pointer;
+  animation: bounceIn 500ms ease-in-out;
+  -webkit-animation: bounceIn 500ms ease-in-out;
 }
 
 .projects:hover .overlay {
   backdrop-filter: none;
 }
 
-.projects:hover .project_btn {
-  display: block;
-}
-
-.projects.show-project {
-  position: absolute;
-  top: -1rem;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  width: 80%;
-  max-width: 30rem;
-  z-index: 50;
-  
-  font-size: 150%;
-
-
-  animation: bounceIn 500ms ease-in-out;
-  -webkit-animation: bounceIn 500ms ease-in-out;
-}
-
-.projects.show-project .project_name {
-  font-size: 110%;
+.shown_projects .project_name {
+  font-size: var(--fs-700);
   text-align: center;
 }
 
-.projects.show-project .project_bottom_container {
-  font-size: 75%;
+.shown_projects .project_bottom_container {
+  font-size: var(--fs-600);
   padding: 1rem;
-}
-
-.projects.show-project .overlay {
-  display: none;
+  font-weight: 300;
 }
 
 .project_bottom_container, .project_name {
   background: #3b3b3bc9;
-}
-
-.projects_wrapper {
   position: relative;
-  display: grid;
-  grid-template-columns: minmax(10rem, 18rem) minmax(10rem, 18rem);
-  gap: 2rem;
-  align-content: center;
-  justify-content: center;
+  z-index: 10;
 }
 
 .project_name {
-  font-size: .9rem;
+  font-size: var(--fs-500);
   padding: .4rem;
-
-  position: relative;
-  z-index: 10;
 }
 
 .project_img {
@@ -374,28 +383,25 @@ h1::after {
 }
 
 .project_bottom_container {
-  padding: .5rem;
-
-  position: relative;
-  z-index: 10;
-
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
+
+  padding: .5rem;
   font-size: .65rem;
+  font-weight: 300;
 }
 
 .project_info {
   max-width: 80%;
-  display: block;
 }
 
 .project_links_container {
   display: flex;
   justify-content: space-between;
-  font-size: .8rem;
+  font-size: var(--fs-400);
   padding-top: 1rem;
-  border-top: 1px solid white;
+  border-top: 1px solid var(--text-basic-dark);
 }
 
 .project_links_container > a {
@@ -442,12 +448,15 @@ h1::after {
   -webkit-backface-visibility: hidden;
 }
 
+/* ----------------------------------------- */
+
 
  /* BOTTOM */
 .socials {
   position: fixed;
   z-index: 100;
   display: flex;
+  gap: 0.5rem;
   bottom: 1rem;
   left: calc(100% - 5rem);
   transform: translate(-50%);
@@ -501,20 +510,7 @@ h1::after {
 
 /* MISC */
 
-.typewriter {
-  width: max-content;
-  margin-bottom: 3rem;
-}
 
-.typewriter h1 {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .05em; 
-  /* Adjust as needed */
-  animation: 
-    typing 650ms steps(150, end)
-}
 
 /* The typing effect */
 @keyframes typing {
@@ -561,6 +557,10 @@ h1::after {
     grid-template-columns: repeat(auto-fit,minmax(10rem,20rem));
     align-items: stretch;
   }
+
+  .projects_text {
+    max-width: 75%;
+}
 
   .projects_top_wrapper {
     text-align: left;

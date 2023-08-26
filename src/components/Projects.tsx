@@ -29,7 +29,7 @@ const Projects: React.FC<ProjectProps> = (props) => {
 
         {/* --------CARD TO SHOW ON CLICK----------- */}
       {props.isShown && <div onClick={props.closeProject} className='overlay_page'></div>}
-      {props.isShown && <article  onClick={()=>props.toggleProject(props.id)} className="show-project projects">
+      {props.isShown && <article  onClick={()=>props.toggleProject(props.id)} className="shown_projects">
         <h3 className='project_name'>{props.projectName}</h3>
         <img className='project_img' src={props.imgSrc} alt="" />
         <div className="project_bottom_container">

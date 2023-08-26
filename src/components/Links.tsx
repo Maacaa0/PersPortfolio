@@ -46,13 +46,11 @@ const Links: React.FC<LinksProps> = (props:any) => {
   };
 
   return (
-      <>
-        <div className='section_selection'>
-          <a className={activeSection === 's1' ? 'underline' : ''} href="#s1" onClick={(e) => { e.preventDefault(); scrollToSection('s1'); }}>ABOUT ME</a>
-          <a className={activeSection === 's2' ? 'underline' : ''} href="#s2" onClick={(e) => { e.preventDefault(); scrollToSection('s2'); }}>SKILLS</a>
-          <a className={activeSection === 's3' ? 'underline' : ''} href="#s3" onClick={(e) => { e.preventDefault(); scrollToSection('s3'); }}>PROJECTS</a>
-        </div>
-      </>
+        <nav>
+          <a className={activeSection === 's1' ? 'underline nav_link' : 'nav_link'} href="#s1" onClick={(e) => { e.preventDefault(); scrollToSection('s1'); }}>ABOUT ME</a>
+          <a className={activeSection === 's2' ? 'underline nav_link' : 'nav_link'} href="#s2" onClick={(e) => { e.preventDefault(); scrollToSection('s2'); }}>SKILLS</a>
+          <a className={activeSection === 's3' ? 'underline nav_link' : 'nav_link'} href="#s3" onClick={(e) => { e.preventDefault(); scrollToSection('s3'); }}>PROJECTS</a>
+        </nav>
   )
 }
 
