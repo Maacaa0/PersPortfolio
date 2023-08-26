@@ -106,7 +106,7 @@ a {
 }
 
 section {
-  min-height: 100dvh;
+  min-height: 100vh;
   color: var(--text-basic-dark);
   background: var(--bg-s1-dark);
 
