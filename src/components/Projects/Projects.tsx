@@ -55,7 +55,7 @@ const Projects: React.FC = () => {
   )})
 
   return (
-    <section id='s2' className='section-2'>
+    <section className='nav_element section-2'>
       <div className="projects_top_wrapper">
         <p className="projects_text text">Here are some of my projects I coded to practice and harden my skills.</p>
         <small className="highlightnt highlight">Click / Tap on project card to show more info</small>

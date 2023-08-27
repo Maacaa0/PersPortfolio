@@ -68,7 +68,6 @@ const About = () => {
           </div>
         </article>
 
-        <div className="divider hide"></div>
 
         <article className="skills_article">
             <div className="svg_wrapper">
