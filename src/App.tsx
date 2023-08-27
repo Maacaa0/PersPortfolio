@@ -8,7 +8,7 @@ import './index.css'
 
 
 function App() {
-  
+ 
   return (
     <main id="s1">
       <Navbar />

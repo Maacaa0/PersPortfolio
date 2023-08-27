@@ -1,40 +1,34 @@
 import React, { useState, useEffect } from 'react'
+import { moonIcon, sunIcon } from './Icons'
 
 const Navbar: React.FC = () => {
 
-  const [activeSection, setActiveSection] = useState<string>('s1');
+  const [darkTheme, setDarkTheme] = useState<boolean>(true)
+  
+  const toggleTheme = () => {  
+    setDarkTheme(prevState => !prevState)
+  }
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = document.querySelectorAll('section');
-      for (const section of sections) {
-        const rect = section.getBoundingClientRect();
-        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-          setActiveSection(section.id);
-          break;
-        }
-      }
-    };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+useEffect(() => {
+  darkTheme ? document.documentElement.style.setProperty('--bg-primary', "#25272b") 
+            : document.documentElement.style.setProperty('--bg-primary', "#f7faff")
 
-  const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  darkTheme ? document.documentElement.style.setProperty('--text-clr', "#f7faff") 
+            : document.documentElement.style.setProperty('--text-clr', "#25272b")
+
+  
+},[darkTheme])
+
 
   return (
-        <nav>
-          <a className={activeSection === 's1' ? 'underline nav_link' : 'nav_link'} href="#s1" onClick={(e) => { e.preventDefault(); scrollToSection('s1'); }}>ABOUT ME</a>
-          <a className={activeSection === 's2' ? 'underline nav_link' : 'nav_link'} href="#s2" onClick={(e) => { e.preventDefault(); scrollToSection('s2'); }}>PROJECTS</a>
-          <a className={activeSection === 's3' ? 'underline nav_link' : 'nav_link'} href="#s3" onClick={(e) => { e.preventDefault(); scrollToSection('s3'); }}>CONTACT ME</a>
+        <nav>       
+          <button onClick={toggleTheme} className='nav_btn'>
+            {darkTheme ? moonIcon : sunIcon}
+          </button>
+
         </nav>
+
   )
 }
 

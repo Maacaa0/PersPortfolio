@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { emailIcon, GithubIcon, linkedInIcon } from './Icons';
 
 const Socials = () => {
 
@@ -19,13 +20,15 @@ const Socials = () => {
   return (
     <div className="socials">
         {isCopied && <div className='confirmation_box'>E-mail copied to Clipboard!</div>}
-        <a className='socials_icon email_icon' onClick={copyToClipBoard}> <img src="images/email.svg" alt="email icon" />
+        <a className='socials_icon email_icon' onClick={copyToClipBoard}> 
+          {emailIcon}
         </a>
+
         <a href="https://github.com/Maacaa0" target='_blank' className="socials_icon">
-            <img src="images/github.svg" alt="github icon" />
+          {GithubIcon}
         </a>
         <a href="https://www.linkedin.com/in/marcel-hess-35a081257/" target='_blank' className="socials_icon">
-            <img src="images/linkedin.svg" alt="linkedin icon" />
+          {linkedInIcon}
         </a>
     </div>
   )
