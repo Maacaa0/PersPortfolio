@@ -1,7 +1,7 @@
 import Navbar from './components/Navbar'
 import About from './components/About/About';
 import Projects from './components/Projects/Projects';
-import Socials from './components/Socials';
+// import Socials from './components/Socials';
 import Me  from './components/About/Me';
 import './index.css'
 
