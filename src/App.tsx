@@ -1,71 +1,22 @@
-import { useState } from 'react';
-import Links from './components/Links'
-import About from './components/About';
-import Projects from './components/Projects';
+import Navbar from './components/Navbar'
+import About from './components/About/About';
+import Projects from './components/Projects/Projects';
 import Socials from './components/Socials';
-import Skills from './components/Skills';
+import Me  from './components/About/Me';
 import './index.css'
-import projectData from "./projectData"
 
 
 
 function App() {
-  const [projectArr, setProjectArr] = useState(projectData)
-    
-  const toggleProject = (id: number) => {
-    setProjectArr(prevState => {
-      return prevState.map(project => {
-        return project.id === id ? {...project, isShown: !project.isShown} : {...project, isShown: false}
-      })
-    }) 
-  }
-
-  const closeProject = () => {
-    setProjectArr(prevState => {
-      return prevState.map(project => {
-        return {...project, isShown: false}
-      })
-    })
-  }
-  
-  const projects = projectArr.map(project => {
-    return (
-      <Projects projectName={project.projectName}
-               projectInfo={project.projectInfo}
-               repo={project.repo}
-               liveSite={project.liveSite}
-               imgSrc={project.imgSrc}
-               isShown={project.isShown}
-               key={project.id}
-               id={project.id}
-               toggleProject={toggleProject}
-               closeProject={closeProject}
-                />
-    )
-  })
   
   return (
-    <main>
-      <Links closeProject={closeProject} />
-      
+    <main id="s1">
+      <Navbar />
+      <Me />
       <About />
-        
-      <Skills />
+      <Projects />
 
-
-      <section id='s3' className='section-3'>
-      <div className="projects_top_wrapper">
-        <p className="projects_text text">Here are some of my projects I coded to practice and harden my skills.</p>
-        <small className="highlightnt highlight">Click / Tap on project card to show more info</small>
-      </div>
-      <div className="projects_wrapper">
-        {projects}
-      </div>
-      </section>
-
-      <Socials />
-
-      
+      <Socials /> 
     </main>
   )
 }
