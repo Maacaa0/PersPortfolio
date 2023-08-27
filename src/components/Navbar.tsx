@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { moonIcon, sunIcon } from './Icons'
+import { GithubIcon, emailIcon, linkedInIcon, moonIcon, sunIcon } from './Icons'
 
 const Navbar: React.FC = () => {
 
@@ -21,8 +21,36 @@ useEffect(() => {
 },[darkTheme])
 
 
+const [isCopied, setIsCopied] = useState<boolean>(false);
+  
+const copyToClipBoard = () => {
+  const textToCopy = "hesss.marcel@gmail.com"
+  
+  navigator.clipboard.writeText(textToCopy)
+  
+  setIsCopied(true);
+  
+  setTimeout(() => {
+    setIsCopied(false);
+  }, 1500); // Display the confirmation for 2 seconds
+}
+
+
   return (
-        <nav>       
+        <nav>   
+          <div className="socials">
+        {isCopied && <div className='confirmation_box'>E-mail copied to Clipboard!</div>}
+        <a className='socials_icon email_icon' onClick={copyToClipBoard}> 
+          {emailIcon}
+        </a>
+
+        <a href="https://github.com/Maacaa0" target='_blank' className="socials_icon">
+          {GithubIcon}
+        </a>
+        <a href="https://www.linkedin.com/in/marcel-hess-35a081257/" target='_blank' className="socials_icon">
+          {linkedInIcon}
+        </a>
+      </div>    
           <button onClick={toggleTheme} className='nav_btn'>
             {darkTheme ? moonIcon : sunIcon}
           </button>

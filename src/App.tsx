@@ -16,7 +16,7 @@ function App() {
       <About />
       <Projects />
 
-      <Socials /> 
+      {/* <Socials />  */}
     </main>
   )
 }
