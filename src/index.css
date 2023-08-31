@@ -364,7 +364,7 @@ h1::after {
 
 .icons_container {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(2.4rem, 4vw));
+  grid-template-columns: repeat(auto-fit,minmax(2.4rem, 3vw));
   gap: .3rem;
 
   margin-left: calc(var(--padding) + var(--ico-margin));
@@ -382,7 +382,8 @@ h1::after {
   position: absolute;
   top: -1.8rem;
   padding: .1rem .6rem;
-  background: black;
+  background: var(--text-clr);
+  color: var(--bg-primary);
   border-radius: 2px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -419,11 +420,11 @@ h1::after {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
+  
   position: relative;
   overflow: hidden;
- 
-  border: 1px solid black;
+  
+  border: 1px solid var(--text-clr);
   border-radius: 6px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -452,8 +453,6 @@ h1::after {
   max-width: 30rem;
   z-index: 50;
   overflow: hidden;
- 
-  border: 1px solid black;
   border-radius: 6px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -466,6 +465,7 @@ h1::after {
   -ms-transition: 400ms ease;
   -o-transition: 400ms ease;
 
+  border: 1px solid var(--text-clr);
   cursor: pointer;
   animation: bounceIn 500ms ease-in-out;
   -webkit-animation: bounceIn 500ms ease-in-out;
@@ -487,12 +487,13 @@ h1::after {
 }
 
 .project_bottom_container, .project_name {
-  background: #3b3b3bc9;
+  background: var(--bg-primary);
   position: relative;
   z-index: 10;
 }
 
 .project_name {
+  color: var(--text-clr);
   font-size: var(--fs-500);
   padding: .4rem;
 }
@@ -665,7 +666,7 @@ h1::after {
     left: calc(var(--padding) + 2.5rem);
     width: fit-content;
     top: 6rem;
-    margin-bottom: 4rem;
+    /* margin-bottom: 4rem; */
   }
 
   h2 {
@@ -708,13 +709,21 @@ h1::after {
     font-size: 1.2rem;
   }
 
-  .socials {
-    bottom: 3rem;
-    left: calc(100% - 10rem);
+  .confirmation_box {
+    top: 1.25rem;
+    left: 8.9rem;
+  }
+
+  
+
+  .nav_btn {
+    width: 2.5rem;
+    height: 2.5rem;
   }
 
   .socials_icon {
-    width: 2.5rem;
+    width: 2rem;
+    height: 2rem;
   }
 }
 
@@ -722,6 +731,11 @@ h1::after {
 
 
   .nav_btn {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .socials_icon {
     width: 2.5rem;
     height: 2.5rem;
   }
@@ -743,14 +757,19 @@ h1::after {
     font-size: 3rem;
   }
 
-  .hide {
-    display: none;
+  .text {
+    line-height: 1.8rem;
   }
 
   .section-1 {
     flex-direction: row;
-    padding-top: 6rem;
     gap: 4rem;
+    padding-top: 3rem;
+  }
+
+  .confirmation_box {
+    top: 1.5rem;
+    left: 10.5rem;
   }
 }
 

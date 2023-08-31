@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { GithubIcon, emailIcon, linkedInIcon, moonIcon, sunIcon } from './Icons'
+import { ghIcon, emailIcon, linkedInIcon, moonIcon, sunIcon } from './Icons'
 
 const Navbar: React.FC = () => {
 
@@ -45,14 +45,14 @@ const copyToClipBoard = () => {
         </a>
 
         <a href="https://github.com/Maacaa0" target='_blank' className="socials_icon">
-          {GithubIcon}
+          {ghIcon}
         </a>
         <a href="https://www.linkedin.com/in/marcel-hess-35a081257/" target='_blank' className="socials_icon">
           {linkedInIcon}
         </a>
       </div>    
           <button onClick={toggleTheme} className='nav_btn'>
-            {darkTheme ? moonIcon : sunIcon}
+            {darkTheme ? sunIcon : moonIcon}
           </button>
 
         </nav>

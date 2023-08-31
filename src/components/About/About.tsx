@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import skillSet from "./skillSet"
+import skillSet from './skillSet'
 import { codeIcon, hearthIcon, lightBulbIcon, userIcon } from '../Icons'
 
 interface SkillsProps {
