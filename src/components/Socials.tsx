@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { emailIcon, GithubIcon, linkedInIcon } from './Icons';
+import { emailIcon, ghIcon, linkedInIcon } from './Icons';
 
 const Socials = () => {
 
@@ -25,7 +25,7 @@ const Socials = () => {
         </a>
 
         <a href="https://github.com/Maacaa0" target='_blank' className="socials_icon">
-          {GithubIcon}
+          {ghIcon}
         </a>
         <a href="https://www.linkedin.com/in/marcel-hess-35a081257/" target='_blank' className="socials_icon">
           {linkedInIcon}
