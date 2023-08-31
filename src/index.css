@@ -574,15 +574,12 @@ h1::after {
 
  /* BOTTOM */
 .socials {
-  /* position: fixed; */
   z-index: 100;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
   gap: 0.5rem;
-  /* bottom: 1rem; */
-  /* left: calc(100% - 5rem); */
-  /* transform: translate(-50%); */
+
 }
 
 .socials_icon {
