@@ -194,6 +194,8 @@ section {
   position: relative;
   top: 6rem;
   height: 60vh;
+  
+  transform: translateY(-8rem);
   -webkit-transform: translateY(-8rem);
   -moz-transform: translateY(-8rem);
   -ms-transform: translateY(-8rem);
@@ -692,6 +694,22 @@ h1::after {
     grid-template-columns: repeat(auto-fit,minmax(10rem,20rem));
     align-items: stretch;
   }
+
+  .shown_projects .project_name {
+    font-size: var(--fs-850);
+  }
+
+  .shown_projects .project_info {
+    font-size: var(--fs-700);
+  }
+
+  .shown_projects .project_links_container {
+    font-size: var(--fs-600);
+  }
+
+  /* .project_info {
+    font-size: 1.2rem;
+  } */
 
   .projects_text {
     max-width: 75%;
