@@ -53,8 +53,8 @@ article {
 
 .section_trans_primary {
   position: absolute;
-  bottom: -40px;
-  height: 100px;
+  bottom: -120px;
+  height: 132px;
   width: 100%;
   fill: var(--bg-primary);
   z-index: 1;
@@ -68,7 +68,7 @@ article {
 
 .section_trans_secondary {
   position: absolute;
-  bottom: 20px;
+  bottom: -40px;
   height: 160px;
   width: 100%;
   fill: var(--highlight-clr);
