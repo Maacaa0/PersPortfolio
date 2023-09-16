@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import { ghIcon, emailIcon, linkedInIcon, moonIcon, sunIcon } from './Icons'
+import useLocalStorage from '../hooks/useLocalStorage'
 
 const Navbar: React.FC = () => {
 
-  const [darkTheme, setDarkTheme] = useState<boolean>(true)
+  const [darkTheme, setDarkTheme] = useLocalStorage({
+    key: 'darkMode',
+    initialValue: false,
+  });
   
   const toggleTheme = () => {  
-    setDarkTheme(prevState => !prevState)
+    setDarkTheme(!darkTheme)
   }
 
 

@@ -25,7 +25,7 @@ const Projects: React.FC = () => {
   const projects = projectArr.map(project => {
     return (
       <div key={project.id}>
-      <article onClick={()=>toggleProject(project.id)} className="projects">
+      <div onClick={()=>toggleProject(project.id)} className="projects">
         <h3 className='project_name'>{project.projectName}</h3>
         <img className='project_img' src={project.imgSrc} alt="project image" />
         <div className="project_bottom_container">
@@ -34,11 +34,11 @@ const Projects: React.FC = () => {
           
         </div>
         <div className="overlay"></div>
-      </article>
+      </div>
 
         {/* --------CARD TO SHOW ON CLICK----------- */}
       {project.isShown && <div onClick={closeProject} className='overlay_page'></div>}
-      {project.isShown && <article onClick={()=>toggleProject(project.id)} className="shown_projects">
+      {project.isShown && <div onClick={()=>toggleProject(project.id)} className="shown_projects">
         <h3 className='project_name'>{project.projectName}</h3>
         <img className='project_img' src={project.imgSrc} alt="project image" />
         <div className="project_bottom_container">
@@ -49,13 +49,13 @@ const Projects: React.FC = () => {
              <a href={project.repo} target='_blank' className="project_repo"><img className='link_ico' src="images/ghlink.svg" alt="link icon" />repository</a>
           </div>
         </div>
-      </article>}
+      </div>}
 
       </div>
   )})
 
   return (
-    <section className='nav_element section-2'>
+    <section className='section-2'>
       <div className="projects_top_wrapper">
         <p className="projects_text text">Here are some of my projects I coded to practice and harden my skills.</p>
         <small className="highlightnt highlight">Click / Tap on project card to show more info</small>

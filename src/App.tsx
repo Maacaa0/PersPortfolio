@@ -1,7 +1,7 @@
 import Navbar from './components/Navbar'
 import About from './components/About/About';
 import Projects from './components/Projects/Projects';
-import Me  from './components/About/Me';
+import Skills from './components/Skills/Skills';
 import './index.css'
 
 
@@ -10,9 +10,11 @@ function App() {
  
   return (
     <main>
+      {/* br tag to avoid margin collapsing? I dont really get it  */}
+      <br /> 
       <Navbar />
-      <Me />
       <About />
+      <Skills />
       <Projects />
 
       {/* <Socials />  */}
