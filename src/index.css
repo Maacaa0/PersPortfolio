@@ -356,7 +356,7 @@ h1::after {
   gap: 2rem;  
 
   min-height: 60vh;
-  /* border-bottom: 10px dashed var(--highlight-clr); */
+  padding-top: 3rem;
 }
 
 .skills_heading {
@@ -533,10 +533,6 @@ h1::after {
   padding: 1rem;
   font-weight: 300;
   background: var(--bg-primary);
-}
-
-.project_bottom_container, .project_name {
-  /* background: var(--bg-primary); */
 }
 
 .project_name {
@@ -751,6 +747,10 @@ footer {
   .text {
     font-size: 1.2rem;
     line-height: 1.8rem;
+  }
+
+  .skills_article {
+    padding-top: unset;
   }
 
   .projects_wrapper {
