@@ -2,7 +2,7 @@
 
 :root {
   --bg-primary: #25272b;
-  --bg-image: url("/src/assets/dark.svg");
+  --bg-image: url("./src/assets/dark.svg");
   --text-clr: #CBD5E1;
   --highlight-clr: #f59e0b;
   --fs-400: .875rem;
@@ -699,7 +699,7 @@ footer {
 @keyframes bounceIn {
   0% {
     opacity: 0;
-    /*prev-45deg*/
+    /*prev-90deg*/
     transform: scale(.3) rotate(-200deg);
     -webkit-transform: scale(.3) rotate(-200deg);
     -moz-transform: scale(.3) rotate(-200deg);
