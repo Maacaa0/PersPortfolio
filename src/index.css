@@ -60,7 +60,6 @@ article {
 
 .wave {
   height: 100px;
-  /* 200 */
   position: relative;
 }
 
@@ -68,7 +67,6 @@ article {
   position: absolute;
   bottom: -60px;
   height: 60px;
-  /* 132 */
   width: 100%;
   fill: var(--highlight-clr);
 
@@ -89,7 +87,6 @@ article {
   position: absolute;
   bottom: 0px;
   height: 80px;
-  /* 160 */
   width: 100%;
   fill: var(--highlight-clr);
   
@@ -230,9 +227,6 @@ h1 {
   overflow: hidden;
   white-space: nowrap;
   letter-spacing: .05em;
-  animation:   typing 650ms steps(150, end);
-  -webkit-animation:   typing 650ms steps(150, end);
-  -webkit-animation:   typing 650ms steps(150, end);
 }
 
 h2 {
@@ -263,7 +257,6 @@ h1::after {
   position: relative;
   width: 400px;
   height: 120px;
-  /* 200 */
   transform-style: preserve-3d;
   animation: rotate 10s infinite 2s;
   -webkit-animation: rotate 10s infinite;
@@ -274,7 +267,6 @@ h1::after {
   top: -50px;
   width: 100%;
   height: 200px;
-  /* background-color: var(--bg-primary); */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -283,6 +275,7 @@ h1::after {
   overflow: hidden;
 
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .front {
@@ -438,8 +431,6 @@ h1::after {
 
 .project_image {
   max-width: 50%;
-  filter: blur(1px) brightness(.5);
-  -webkit-filter: blur(1px) brightness(.5);
 }
 
 .project_info {
@@ -473,7 +464,6 @@ h1::after {
 }
 
 .projects_top_wrapper {
-  /* text-align: center; */
   margin-bottom: 1.5rem;
 } 
 
@@ -648,6 +638,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: .3rem;
 
   padding-top: 3rem;
   border-top: 1px solid var(--text-clr);
@@ -693,12 +684,11 @@ footer {
 @keyframes bounceIn {
   0% {
     opacity: 0;
-    /*prev-90deg*/
-    transform: scale(.3) rotate(-200deg);
-    -webkit-transform: scale(.3) rotate(-200deg);
-    -moz-transform: scale(.3) rotate(-200deg);
-    -ms-transform: scale(.3) rotate(-200deg);
-    -o-transform: scale(.3) rotate(-200deg);
+    /*prev-90deg*/transform: scale(.3) rotate(-100deg);
+    -webkit-transform: scale(.3) rotate(-100deg);
+    -moz-transform: scale(.3) rotate(-100deg);
+    -ms-transform: scale(.3) rotate(-100deg);
+    -o-transform: scale(.3) rotate(-100deg);
 }
  50% {
     opacity: 1;
@@ -782,6 +772,11 @@ footer {
   
   .project_info {
     padding: 1.5rem;
+  }
+
+  .project_image {
+    filter: blur(1px) brightness(.5);
+    -webkit-filter: blur(1px) brightness(.5);
   }
 
   .created_with {

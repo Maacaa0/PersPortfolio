@@ -120,7 +120,7 @@ const Projects: React.FC = () => {
     <section className="section-2">
       <div className="projects_top_wrapper">
         <p className="projects_text text">
-          My projects I coded to practice and harden my skills.
+          Projects I coded to practice and harden my skills.
         </p>
         <small className="highlightnt highlight">
           Click / Tap on project card to show more info
