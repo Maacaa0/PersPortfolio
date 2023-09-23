@@ -14,8 +14,6 @@ const About = () => {
           </p>
           </div>
 
-          {/* <div className="divider"></div> */}
-
           <div className="svg_wrapper hobbys_info">
            {hearthIcon}
           <p className=' text'>
