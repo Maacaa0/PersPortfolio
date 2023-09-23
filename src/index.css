@@ -311,7 +311,8 @@ h1::after {
 }
 
 .bottom { 
-  transform: rotateX(-90deg) translateZ(100px); }
+  transform: rotateX(-90deg) translateZ(100px); 
+}
 
   @keyframes rotate {
     0% { transform: rotateX(0); }
@@ -368,8 +369,6 @@ h1::after {
   gap: .3rem;
 
   margin-top: 1rem;
-  /* margin-left: calc(var(--padding) + var(--ico-margin)); */
-
 }
 
 .ico_wrapper {
@@ -425,8 +424,6 @@ h1::after {
 
 .project_container:hover {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  /*border: 2px solid var(--text-clr);
-  */
 }
 
 .project_image {
@@ -518,6 +515,7 @@ h1::after {
   font-size: var(--fs-700);
   text-align: center;
   background: var(--bg-primary);
+  padding: .5rem 0;
 }
 
 .shown_project_bottom_container {
@@ -684,7 +682,7 @@ footer {
 @keyframes bounceIn {
   0% {
     opacity: 0;
-    /*prev-90deg*/transform: scale(.3) rotate(-100deg);
+    transform: scale(.3) rotate(-100deg);
     -webkit-transform: scale(.3) rotate(-100deg);
     -moz-transform: scale(.3) rotate(-100deg);
     -ms-transform: scale(.3) rotate(-100deg);
