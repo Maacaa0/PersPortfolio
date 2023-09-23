@@ -59,15 +59,16 @@ article {
 }
 
 .wave {
-  height: 200px;
+  height: 100px;
+  /* 200 */
   position: relative;
-  /* top: -4rem; */
 }
 
 .section_trans_primary {
   position: absolute;
   bottom: -60px;
-  height: 132px;
+  height: 60px;
+  /* 132 */
   width: 100%;
   fill: var(--highlight-clr);
 
@@ -87,7 +88,8 @@ article {
 .section_trans_secondary {
   position: absolute;
   bottom: 0px;
-  height: 160px;
+  height: 80px;
+  /* 160 */
   width: 100%;
   fill: var(--highlight-clr);
   
@@ -733,7 +735,6 @@ footer {
     left: calc(var(--padding) + 2.5rem);
     width: fit-content;
     top: 6rem;
-    /* margin-bottom: 4rem; */
   }
 
   h2 {
@@ -747,6 +748,18 @@ footer {
   .text {
     font-size: 1.2rem;
     line-height: 1.8rem;
+  }
+
+  .wave {
+    height: 250px;
+  }
+
+  .section_trans_primary {
+    height: 132px;
+  }
+
+  .section_trans_secondary {
+    height: 160px;
   }
 
   .skills_article {
