@@ -393,49 +393,83 @@ h1::after {
   padding: 2rem;
 }
 
-.projects_top_wrapper {
-  text-align: center;
-  margin-bottom: 1.5rem;
+.project_container {
+  display: flex;
+  border: 3px solid var(--text-clr);
+  cursor: pointer;
+  max-width: 50rem;
+
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+  overflow: hidden;
 }
+
+.reversed {
+  flex-direction: row-reverse;
+}
+
+:not(.reversed) > .project_info {
+  margin-left: .5rem;
+} 
+
+.project_container:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.project_image {
+  max-width: 50%;
+  filter: blur(1px) brightness(.5);
+  -webkit-filter: blur(1px) brightness(.5);
+}
+
+.project_info {
+  max-width: 50%;
+  padding: .5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.created_with {
+  display: none;
+  color: var(--highlight-clr);
+}
+
+.shown_created_with {
+  color: var(--highlight-clr);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.project_container:hover .project_image {
+  filter: blur(0px) brightness(.8);
+  -webkit-filter: blur(0px) brightness(.8);
+  transition: filter 250ms ease;
+  -webkit-transition: filter 250ms ease;
+  -moz-transition: filter 250ms ease;
+  -ms-transition: filter 250ms ease;
+  -o-transition: filter 250ms ease;
+}
+
+.projects_top_wrapper {
+  /* text-align: center; */
+  margin-bottom: 1.5rem;
+} 
 
 .projects_text {
   margin-top: 2rem;
 }
 
 .projects_wrapper {
-  position: relative;
-  display: grid;
-  grid-template-columns: minmax(10rem, 18rem) minmax(10rem, 18rem);
-  gap: 1.5rem;
-  align-content: center;
-  justify-content: center;
-}
-
-.projects {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  
-  position: relative;
-  overflow: hidden;
-  
-  border: 1px solid var(--text-clr);
-  border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
-
-  transition: 400ms ease;
-  -webkit-transition: 400ms ease;
-  -moz-transition: 400ms ease;
-  -ms-transition: 400ms ease;
-  -o-transition: 400ms ease;
-
-  cursor: pointer;
+  gap: 2rem;
 }
 
-.shown_projects {
+
+.shown_project {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -447,8 +481,9 @@ h1::after {
   margin: 0 auto;
   width: 80%;
   max-width: 30rem;
+  max-height: 90%;
   z-index: 50;
-  overflow: hidden;
+  overflow: scroll;
   border-radius: 6px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -465,38 +500,47 @@ h1::after {
   cursor: pointer;
   animation: bounceIn 500ms ease-in-out;
   -webkit-animation: bounceIn 500ms ease-in-out;
+
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;
 }
 
-.projects:hover .overlay {
+.shown_project::-webkit-scrollbar {
+  display: none;
+}
+
+/* .projects:hover .overlay {
   backdrop-filter: none;
-}
+} */
 
-.shown_projects .project_name {
+.shown_project_name {
   font-size: var(--fs-700);
   text-align: center;
+  background: var(--bg-primary);
 }
 
-.shown_projects .project_bottom_container {
+.shown_project_bottom_container {
   font-size: var(--fs-600);
   padding: 1rem;
   font-weight: 300;
+  background: var(--bg-primary);
 }
 
 .project_bottom_container, .project_name {
   background: var(--bg-primary);
-  position: relative;
-  z-index: 10;
 }
 
 .project_name {
   color: var(--text-clr);
   font-size: var(--fs-500);
-  padding: .4rem;
+  margin-bottom: .5rem;
 }
 
 .project_img {
-  width: 100%;
-  height: 100%;
+  width: 101%;
+  height: 101%;
+  position: relative;
+  top: -1px;
 }
 
 .project_bottom_container {
@@ -509,9 +553,6 @@ h1::after {
   font-weight: 300;
 }
 
-.project_info {
-  max-width: 80%;
-}
 
 .project_links_container {
   display: flex;
@@ -532,10 +573,13 @@ h1::after {
 }
 
 
-.overlay {
+/* .overlay {
   position: absolute;
-  width: 100%;
+  width: 50%;
   height: 100%;
+
+  top: 0;
+  left: 0;
   background: #0000008a;
   z-index: 1;
   backdrop-filter: blur(2px) brightness(0.4);
@@ -551,7 +595,7 @@ h1::after {
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
-}
+} */
 
 .overlay_page {
   border-radius: 0;
@@ -632,20 +676,36 @@ h1::after {
 
 
 @keyframes bounceIn {
-  0% { 
-    opacity: 0; 
-    transform: scale(.3);
- }
- 50% { 
+  0% {
+    opacity: 0;
+    transform: scale(.3) rotate(-90deg);
+    -webkit-transform: scale(.3) rotate(-90deg);
+    -moz-transform: scale(.3) rotate(-90deg);
+    -ms-transform: scale(.3) rotate(-90deg);
+    -o-transform: scale(.3) rotate(-90deg);
+}
+ 50% {
     opacity: 1;
     transform: scale(1.05);
- }
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
  70% {
     transform: scale(.9);
- }
+    -webkit-transform: scale(.9);
+    -moz-transform: scale(.9);
+    -ms-transform: scale(.9);
+    -o-transform: scale(.9);
+}
  100% {
     transform: scale(1);
- }
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
 }
 
 @keyframes opacity {
@@ -680,20 +740,28 @@ h1::after {
     grid-template-columns: repeat(auto-fit,minmax(10rem,20rem));
     align-items: stretch;
   }
+  
+  .project_info {
+    padding: 1.5rem;
+  }
 
-  .shown_projects .project_name {
+  .created_with {
+    display: unset;
+  }
+
+  .shown_project_name {
     font-size: var(--fs-850);
   }
 
-  .shown_projects .project_info {
+  .shown_project_info {
     font-size: var(--fs-700);
   }
 
-  .shown_projects .project_links_container {
+  .project_links_container {
     font-size: var(--fs-600);
   }
 
-  .projects_text {
+  .shown_projects_text {
     max-width: 75%;
 }
 
@@ -704,7 +772,6 @@ h1::after {
 
   .project_bottom_container, .project_name {
     font-size: 1.2rem;
-    padding: 1rem;
   }
 
   .confirmation_box {
@@ -768,5 +835,10 @@ h1::after {
   .confirmation_box {
     top: 1.5rem;
     left: 10.5rem;
+  }
+
+  .projects_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
