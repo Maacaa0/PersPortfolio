@@ -21,8 +21,8 @@ useEffect(() => {
   darkTheme ? document.documentElement.style.setProperty('--text-clr', "#f7faff") 
             : document.documentElement.style.setProperty('--text-clr', "#25272b")
 
-  darkTheme ? document.documentElement.style.setProperty('--bg-image', "url('./src/assets/dark.svg')" )
-            : document.documentElement.style.setProperty('--bg-image', "url('./src/assets/light.svg')")
+  darkTheme ? document.documentElement.style.setProperty('--bg-image', "url('/images/dark.svg')" )
+            : document.documentElement.style.setProperty('--bg-image', "url('./images/light.svg')")
 
   
 },[darkTheme])

@@ -28,23 +28,7 @@ const skillSet = [
         text: "Git",
         imgSrc: "images/techstack/git.svg",
         show: false 
-    },
-    // {
-    //     text: "Visual Studio Code",
-    //     imgSrc: "images/techstack/vs.svg"
-    // },
-    // {
-    //     text: "Netlify",
-    //     imgSrc: "images/techstack/netlify.svg"
-    // },
-    // {
-    //     text: "Figma",
-    //     imgSrc: "images/techstack/figma.svg"
-    // },
-    // {
-    //     text: "Tailwind",
-    //     imgSrc: "images/techstack/tailwind.svg"
-    // },
+    }
   ]
 
   export default skillSet

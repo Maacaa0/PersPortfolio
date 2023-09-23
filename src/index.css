@@ -2,7 +2,7 @@
 
 :root {
   --bg-primary: #25272b;
-  --bg-image: url("./src/assets/dark.svg");
+  --bg-image: url("/images/dark.svg");
   --text-clr: #CBD5E1;
   --highlight-clr: #f59e0b;
   --fs-400: .875rem;
@@ -159,10 +159,6 @@ a {
   text-decoration: none;
 }
 
-section {
-  /* padding: var(--padding); */
-}
-
 .svg_wrapper {
   display: flex;
 }
@@ -174,7 +170,7 @@ section {
 
 .text {
   font-size: var(--fs-500);
-  font-weight: 400;
+  font-weight: 300;
   position: relative;
   z-index: 10;
   line-height: 1.6rem;
