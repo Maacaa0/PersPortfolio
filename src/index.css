@@ -65,7 +65,7 @@ article {
 
 .section_trans_primary {
   position: absolute;
-  bottom: -60px;
+  top: 80px;
   height: 60px;
   width: 100%;
   fill: var(--highlight-clr);
@@ -85,7 +85,7 @@ article {
 
 .section_trans_secondary {
   position: absolute;
-  bottom: 0px;
+  top: 0;
   height: 80px;
   width: 100%;
   fill: var(--highlight-clr);
@@ -352,15 +352,15 @@ h1::after {
   gap: 2rem;  
 
   min-height: 60vh;
-  padding-top: 3rem;
+  /* padding-top: 3rem; */
 }
 
-.skills_heading {
+/* .skills_heading {
   position: relative;
   font-size: var(--fs-700);
   font-weight: 400;
   margin-top: 2rem;
-}
+} */
 
 
 .icons_container {
@@ -750,9 +750,9 @@ footer {
     height: 160px;
   }
 
-  .skills_article {
+  /* .skills_article {
     padding-top: unset;
-  }
+  } */
 
   .projects_wrapper {
     justify-content: start;
