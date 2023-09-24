@@ -517,6 +517,10 @@ h1::after {
   background: var(--bg-primary);
   padding: .5rem 0;
 }
+/* ?????????????? */
+.shown_project_img {
+  max-height: 60%;
+}
 
 .shown_project_bottom_container {
   font-size: var(--fs-600);
