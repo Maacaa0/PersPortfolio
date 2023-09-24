@@ -519,7 +519,8 @@ h1::after {
 }
 /* ?????????????? */
 .shown_project_img {
-  max-height: 30rem;
+  width: 100%;
+  height: 100%;
 }
 
 .shown_project_bottom_container {
