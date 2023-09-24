@@ -519,7 +519,7 @@ h1::after {
 }
 /* ?????????????? */
 .shown_project_img {
-  max-height: 60%;
+  max-height: 30rem;
 }
 
 .shown_project_bottom_container {
