@@ -30,13 +30,11 @@
   -moz-transition: background var(--transition);
   -ms-transition: background var(--transition);
   -o-transition: background var(--transition);
-  animation: 500ms projectLoadIn ease 1;
-  -webkit-animation: 500ms projectLoadIn ease 1;
 }
 
 :root {
   font-family: "Roboto Mono", "Roboto Slab", sans-serif;
-
+  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -46,13 +44,12 @@
 
 main {
   color: var(--text-clr);
-  background: var(--bg-primary);
-}
-main {
   background-color: #25272B;
   background-image: var(--bg-image);
   background-attachment: fixed;
   background-size: cover;
+  animation: 3s projectLoadIn ease 1;
+  -webkit-animation: 3s projectLoadIn ease 1;
 }
 
 article {
