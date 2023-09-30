@@ -77,7 +77,7 @@ const Navbar: React.FC<NavbarProps> = ({toggleLanguage, lang}) => {
         </a>
       </div>
       <div className="nav_btns">
-        <button onClick={toggleLanguage} className="lang_btn">{lang === "en" ? "EN" : "CZ"}</button>
+        <button onClick={toggleLanguage} className="lang_btn">{lang === "en" ? "CZ" : "EN"}</button>
         <button onClick={toggleTheme} className="nav_btn">
           {darkTheme ? sunIcon : moonIcon}
         </button>

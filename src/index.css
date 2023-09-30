@@ -30,7 +30,8 @@
   -moz-transition: background var(--transition);
   -ms-transition: background var(--transition);
   -o-transition: background var(--transition);
-
+  animation: 500ms projectLoadIn ease 1;
+  -webkit-animation: 500ms projectLoadIn ease 1;
 }
 
 :root {
@@ -167,6 +168,14 @@ nav {
   cursor: pointer;
 }
 
+.multiply {
+  mix-blend-mode: multiply;
+}
+
+.dodge {
+  mix-blend-mode: color-dodge;
+}
+
 /* ----------------------------- */
 
 a {
@@ -185,10 +194,10 @@ a {
 
 .text {
   font-size: var(--fs-500);
-  font-weight: 300;
+  font-weight: 400;
   position: relative;
   z-index: 10;
-  line-height: 1.6rem;
+  line-height: 1.7rem;
   max-width: 30rem;
 }
 
@@ -204,7 +213,7 @@ a {
 }
 
 .highlightnt {
-  opacity: .7;
+  opacity: .8;
 }
 
 
@@ -483,6 +492,7 @@ h1::after {
 .projects_text {
   margin-top: 2rem;
   font-weight: 600;
+  font-size: 1.2rem;
 }
 
 .projects_wrapper {
@@ -691,12 +701,9 @@ footer {
 
 /* MISC */
 
-
-
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+::selection {
+  background: #f59f0b77;
+  color: #25272b;
 }
 
 
@@ -738,6 +745,12 @@ footer {
   50% {opacity:1;}
 }
 
+@keyframes projectLoadIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+
 
 @media (min-width: 600px) {
   .typewriter {
@@ -756,7 +769,7 @@ footer {
 
   .text {
     font-size: 1.2rem;
-    line-height: 1.8rem;
+    line-height: 2rem;
   }
 
   .wave {
@@ -771,10 +784,6 @@ footer {
     height: 160px;
   }
 
-  /* .skills_article {
-    padding-top: unset;
-  } */
-
   .projects_wrapper {
     justify-content: start;
     grid-template-columns: repeat(auto-fit,minmax(10rem,20rem));
@@ -788,6 +797,10 @@ footer {
     -ms-transform: translateY(-.5rem);
     -o-transform: translateY(-.5rem);
 }
+
+  .projects_text {
+    font-size: 1.4rem;
+  }
   
   .project_info {
     padding: 1.5rem;

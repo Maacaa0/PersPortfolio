@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import projectData from "./projectData";
+import { LangProps } from "../../App";
 
-const Projects: React.FC = () => {
+const Projects: React.FC<LangProps> = ({ lang }) => {
   const [projectArr, setProjectArr] = useState(projectData);
 
   const toggleProject = (id: number) => {
@@ -46,7 +47,7 @@ const Projects: React.FC = () => {
             <small className="project_info_text">{project.projectInfo}</small>
           </div>
           <small className="created_with">
-            Created with:
+            {lang === "en" ? "Created with:" : "Vytvořeno pomocí:"}
             <br />
             {project.buildWith}
           </small>
@@ -81,7 +82,7 @@ const Projects: React.FC = () => {
                 <br />
                 <br />
                 <small className="shown_created_with">
-                  Created with:
+                  {lang === "en" ? "Created with:" : "Vytvořeno pomocí:"}
                   <br />
                   {project.buildWith}
                 </small>
@@ -98,7 +99,7 @@ const Projects: React.FC = () => {
                     src="images/link.svg"
                     alt="link icon"
                   />
-                  preview site
+                  {lang === "en" ? "preview site" : "otevřít stránku"}
                 </a>
                 <a href={project.repo} target="_blank" className="project_repo">
                   <img
@@ -119,11 +120,13 @@ const Projects: React.FC = () => {
   return (
     <section className="section-2">
       <div className="projects_top_wrapper">
-        <p className="projects_text text">
-          Projects I coded to practice and harden my skills.
+        <p className="projects_text">
+          {lang === "en"
+            ? "Projects I coded to practice and harden my skills."
+            : "Projekty, které jsem vytvořil, abych procvičil své dovednosti."}
         </p>
         <small className="highlightnt highlight">
-          Click / Tap on project card to show more info
+          {lang === "en" ? "Click / Tap on project card to show more info" : "Kliknutím / klepnutím na kartu projektu zobrazíte více informací"}
         </small>
       </div>
       <div className="projects_wrapper">{projects}</div>

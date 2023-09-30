@@ -130,8 +130,8 @@ const Skills = ({ lang }: LangProps) => {
             <>
               Naučil jsem se základy <span className="highlight">HTML</span>,{" "}
               <span className="highlight">CSS</span>, a{" "}
-              <span className="highlight">Javascriptu</span>. Nyní jsem na cestě naučit se React s Typescriptem a Git abych své dovednosti posunul na další úroveň.
-              <br /> <br /> Rozumím, že je toho tolik, co ještě nevím, ale jsem namotivovaný se učit a prozkoumávat nové možnosti.
+              <span className="highlight">Javascriptu</span>. Nyní se věnuji Reactu s Typescriptem a učím se pracovat s Gitem abych své dovednosti posunul na další úroveň.
+              <br /> <br /> Rozumím, že je toho mnoho, co ještě nevím, ale jsem namotivovaný se učit a prozkoumávat nové možnosti.
             </>
           )}
         </p>

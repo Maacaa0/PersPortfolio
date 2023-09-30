@@ -1,17 +1,20 @@
-import { useState } from 'react';
 import Navbar from './components/Navbar'
 import About from './components/About/About';
 import Projects from './components/Projects/Projects';
 import Skills from './components/Skills/Skills';
 import Footer from './components/Footer';
 import './index.css'
+import useLocalStorage from './hooks/useLocalStorage';
 
 export type LangProps = {
   lang: string
 }
 
 function App() {
-  const [lang, setLang] = useState<string>("en")
+  const [lang, setLang] = useLocalStorage({
+    key: "language",
+    initialValue: "cz",
+  });
 
 
   function toggleLanguage() {
@@ -25,7 +28,7 @@ function App() {
       <Navbar lang={lang} toggleLanguage={toggleLanguage} />
       <About lang={lang} />
       <Skills lang={lang} />
-      <Projects />
+      <Projects lang={lang} />
       <Footer />
       
     </main>
