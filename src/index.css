@@ -151,6 +151,22 @@ nav {
   fill: var(--highlight-clr);
 }
 
+.nav_btns {
+  display: flex;
+  gap: .5rem;
+}
+
+.lang_btn {
+  color: var(--text-clr);
+  font-weight: 400;
+  appearance: none;
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  font-family: inherit;
+  cursor: pointer;
+}
+
 /* ----------------------------- */
 
 a {
