@@ -20,7 +20,7 @@ const About = ({ lang }: LangProps) => {
           {hearthIcon}
           <p className=" text">
 
-           {lang === "en" ?  "I love all kind of sports like running, working out, and swimming to           keep myself energized." : "Miluji všechny druhy sportu, jako je běh, cvičení a plavání, abych se udržel ve formě." 
+           {lang === "en" ?  "I love all kind of sports like running, working out, and swimming to keep myself energized." : "Aktivně se věnuji sportům, jako je běh, cvičení a plavání, abych se udržel ve formě." 
           }
             <br />
             <br />

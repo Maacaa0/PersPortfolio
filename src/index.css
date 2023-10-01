@@ -463,11 +463,11 @@ h1::after {
 
 .created_with {
   display: none;
-  color: var(--highlight-clr);
+  color: var(--text-clr);
 }
 
 .shown_created_with {
-  color: var(--highlight-clr);
+  color: var(--text-clr);
   margin-bottom: 1rem;
   display: block;
 }
@@ -699,7 +699,7 @@ footer {
 /* MISC */
 
 ::selection {
-  background: #f59f0b77;
+  background: #f59f0b;
   color: #25272b;
 }
 
