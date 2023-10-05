@@ -1,9 +1,14 @@
-import React, { useState } from "react";
-import projectData from "./projectData";
+import React, { useState, useEffect } from "react";
+import { projectDataCZ } from "./projectData";
+import { projectDataEN } from "./projectData";
 import { LangProps } from "../../App";
 
 const Projects: React.FC<LangProps> = ({ lang }) => {
-  const [projectArr, setProjectArr] = useState(projectData);
+  const [projectArr, setProjectArr] = useState(lang === "en" ? projectDataEN : projectDataCZ);
+
+  useEffect(() => {
+    setProjectArr(lang === "en" ? projectDataEN : projectDataCZ)
+  }, [lang])
 
   const toggleProject = (id: number) => {
     setProjectArr((prevState) => {
