@@ -374,7 +374,7 @@ h1::after {
   gap: 2rem;  
 
   min-height: 60vh;
-  /* padding-top: 3rem; */
+  padding-top: 3rem;
 }
 
 /* .skills_heading {

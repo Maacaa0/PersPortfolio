@@ -55,7 +55,7 @@ const Navbar: React.FC<NavbarProps> = ({toggleLanguage, lang}) => {
     <nav>
       <div className="socials">
         {isCopied && (
-          <div className="confirmation_box">E-mail copied to Clipboard!</div>
+          <div className="confirmation_box">{lang === "en" ? "E-mail copied to clipboard!" : "E-mail zkopírován do schránky!"}</div>
         )}
         <a className="socials_icon email_icon" onClick={copyToClipBoard}>
           {emailIcon}
