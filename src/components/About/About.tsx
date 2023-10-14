@@ -24,7 +24,7 @@ const About = ({ lang }: LangProps) => {
           }
             <br />
             <br />
-            {lang === "en" ? "Nature inspires me and brings me peace. In my spare time, I enjoy reading or listening to music." : "Příroda mě insipiruje a uklidňuje. Ve volném čase rád čtu nebo poslouchám hudbu."}
+            {lang === "en" ? "Nature inspires me and brings me peace. In my spare time, I enjoy reading or listening to music." : "Příroda mě inspiruje a uklidňuje. Ve volném čase rád čtu nebo poslouchám hudbu."}
           </p>
         </div>
       </article>

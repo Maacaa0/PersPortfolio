@@ -45,7 +45,7 @@ export const projectDataEN = [
     {
       id: 1,
       projectName: "Workout Timer",
-      projectInfo: "Interaktivní časovač pro kruhové tréninky nebo jiné cvičení",
+      projectInfo: "Interaktivní časovač pro kruhové tréninky nebo jiné cvičení.",
       repo: "https://github.com/Maacaa0/workout_timer",
       liveSite: "https://maacaa0.github.io/workout_timer/",
       imgSrc: "/images/timer_.jpeg",
