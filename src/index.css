@@ -57,7 +57,7 @@ article {
 }
 
 .wave {
-  height: 100px;
+  height: 110px;
   position: relative;
 }
 
@@ -373,7 +373,7 @@ h1::after {
   flex-direction: column;
   gap: 2rem;  
 
-  min-height: 60vh;
+  /* min-height: 60vh; */
   padding-top: 3rem;
 }
 
@@ -778,7 +778,7 @@ footer {
   }
 
   .section_trans_secondary {
-    height: 160px;
+    height: 151px;
   }
 
   .projects_wrapper {
@@ -915,7 +915,7 @@ footer {
 }
 
 @media screen and (max-width: 1000px) and (orientation: landscape) {
-  .section_trans_primary, .section_trans_secondary {
+  .wave {
     display: none;
   }
 
