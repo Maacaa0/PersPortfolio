@@ -31,11 +31,11 @@ export const projectDataEN = [
     },
     {
       id: 4,
-      projectName: "Tenzies",
-      projectInfo: "A game where your objective is to roll the dice until you get Tenzies.",
-      repo: "https://github.com/Maacaa0/Tenzies_React",
-      liveSite: "https://shiny-cocada-1768e1.netlify.app/",
-      imgSrc: "/images/tenzies_.jpeg",
+      projectName: "Country Flags",
+      projectInfo: "Api data fetching, filtering by region, search bar, dark/light theme switch.",
+      repo: "https://github.com/Maacaa0/Countries-Project",
+      liveSite: "https://adorable-gumdrop-143edc.netlify.app",
+      imgSrc: "/images/flags.png",
       buildWith: "CSS / React",
       isShown: false
     }
@@ -74,11 +74,11 @@ export const projectDataEN = [
     },
     {
       id: 4,
-      projectName: "Tenzies",
-      projectInfo: "Hra, kde házíte kostkou a musíte hodit všech deset kostek se stejnou hodnotou.",
-      repo: "https://github.com/Maacaa0/Tenzies_React",
-      liveSite: "https://shiny-cocada-1768e1.netlify.app/",
-      imgSrc: "/images/tenzies_.jpeg",
+      projectName: "Vlajky Zemí",
+      projectInfo: "Načítání dat z api, filtrování podle regionů, vyhledávání, tmavý/světlý řežim.",
+      repo: "https://github.com/Maacaa0/Countries-Project",
+      liveSite: "https://adorable-gumdrop-143edc.netlify.app",
+      imgSrc: "/images/flags.png",
       buildWith: "CSS / React",
       isShown: false
     }

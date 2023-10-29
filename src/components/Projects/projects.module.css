@@ -292,3 +292,34 @@
     -o-transform: scale(1);
   }
 }
+
+.more {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  max-width: 60rem;
+  margin: auto;
+}
+
+th {
+  color: var(--highlight-clr);
+}
+
+table, th, td {
+  border: 1px solid var(--text-clr);
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--bg-primary);
+}
