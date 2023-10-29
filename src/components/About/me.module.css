@@ -142,8 +142,7 @@
 
 .downArrow {
   position: absolute;
-  top: calc(100vh - 150px);
-  left: calc(50% - 14px);
+  top: calc(100vh - 200px);
   width: 0;
   height: 50px;
   border: 2px solid;
