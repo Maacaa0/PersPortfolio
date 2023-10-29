@@ -10,7 +10,7 @@ const Me = ({ lang }: LangProps) => {
             <h2 className={styles.h2}>Hello World!</h2>
           </div>
           <div className={styles.back}>
-            <p>{lang === "en" ? "I am" : "Jsem"}</p>
+            <p>{lang === "en" ? "I am" : "Jmenuji se"}</p>
             <h1 className={styles.h1}>Marcel Hess</h1>
           </div>
           <div className={styles.right}></div>

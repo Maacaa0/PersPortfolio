@@ -13,7 +13,6 @@
   width: 100%;
   overflow: hidden;
   margin-top: 3.5rem;
-  /* padding-left: calc(var(--padding) + 2rem); */
   padding: 2rem calc(var(--padding) + 2rem);
   border: var(--inicials-border);
 
@@ -60,14 +59,15 @@
 }
 
 .h1::before {
-  content: "[";
+  content: '{';
   margin-right: 1rem;
   color: var(--highlight-clr);
   animation: opacity 2s infinite;
+  -webkit-animation: opacity 2s infinite;
 }
 
 .h1::after {
-  content: "]";
+  content: '}';
   margin-left: 1rem;
   color: var(--highlight-clr);
   animation: opacity 2s infinite;
@@ -266,4 +266,9 @@
     transition: 200ms linear;
     background-position: -200% center;
   }
+}
+
+@keyframes opacity {
+  0%, 100% {opacity:0;}
+  50% {opacity:1;}
 }

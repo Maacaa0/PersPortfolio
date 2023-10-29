@@ -42,11 +42,7 @@
 main {
   color: var(--text-clr);
   background-color: var(--bg-primary);
-  /* background-image: var(--bg-image); */
-  /* background-attachment: fixed; */
-  /* background-size: cover; */
 }
-
 
 a {
   color: inherit;
