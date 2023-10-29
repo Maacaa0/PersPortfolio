@@ -150,30 +150,53 @@ const Projects: React.FC<LangProps> = ({ lang }) => {
           <tr>
             <td>31. Pluk RCHBO</td>
             <td>
-              <a target="_blank" href="https://github.com/Maacaa0/31-hana-maca-final">GitHub</a>
+              <a
+                target="_blank"
+                href="https://github.com/Maacaa0/31-hana-maca-final"
+              >
+                GitHub
+              </a>
             </td>
             <td>
-              <a target="_blank" href="https://31pluk-liberec.cz/">Live Site</a>
+              <a target="_blank" href="https://31pluk-liberec.cz/">
+                Live Site
+              </a>
             </td>
           </tr>
           <tr>
             <td>Tenzies</td>
             <td>
-              <a target="_blank" href="https://github.com/Maacaa0/Tenzies_React">GitHub</a>
+              <a
+                target="_blank"
+                href="https://github.com/Maacaa0/Tenzies_React"
+              >
+                GitHub
+              </a>
             </td>
             <td>
-              <a target="_blank" href="https://shiny-cocada-1768e1.netlify.app/">Live Site</a>
+              <a
+                target="_blank"
+                href="https://shiny-cocada-1768e1.netlify.app/"
+              >
+                Live Site
+              </a>
             </td>
           </tr>
           <tr>
             <td>Tip calculator</td>
             <td>
-              <a target="_blank" href="https://github.com/Maacaa0/tip-calculator-app-main">
+              <a
+                target="_blank"
+                href="https://github.com/Maacaa0/tip-calculator-app-main"
+              >
                 GitHub
               </a>
             </td>
             <td>
-              <a target="_blank" href="https://maacaa0.github.io/tip-calculator-app-main/">
+              <a
+                target="_blank"
+                href="https://maacaa0.github.io/tip-calculator-app-main/"
+              >
                 Live Site
               </a>
             </td>
@@ -181,12 +204,18 @@ const Projects: React.FC<LangProps> = ({ lang }) => {
           <tr>
             <td>Advice generator</td>
             <td>
-              <a target="_blank" href="https://github.com/Maacaa0/advice-generator-app-main">
+              <a
+                target="_blank"
+                href="https://github.com/Maacaa0/advice-generator-app-main"
+              >
                 GitHub
               </a>
             </td>
             <td>
-              <a target="_blank" href="https://maacaa0.github.io/advice-generator-app-main/">
+              <a
+                target="_blank"
+                href="https://maacaa0.github.io/advice-generator-app-main/"
+              >
                 Live Site
               </a>
             </td>
