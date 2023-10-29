@@ -1,0 +1,114 @@
+.article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 2rem;
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+  position: relative;
+  z-index: 50;
+  background: var(--bg-primary);
+}
+
+.flex {
+  display: flex;
+}
+
+.text {
+  font-size: var(--fs-500);
+  font-weight: 400;
+  position: relative;
+  z-index: 10;
+  line-height: 1.7rem;
+  max-width: 30rem;
+}
+
+.filling {
+  width: 100%;
+  height: 100vh;
+  background: var(--bg-primary);
+  position: relative;
+  z-index: -1;
+}
+
+.wave {
+  position: relative;
+  z-index: 50;
+  background: var(--bg-primary);
+  box-shadow: 0px -70px 49px 11px var(--highlight-clr);
+  top: 6rem;
+
+}
+
+/* .firstWave {
+  position: absolute;
+  top: 80px;
+  height: 60px;
+  width: 100%;
+  fill: var(--highlight-clr);
+
+  transition: fill var(--transition);
+  -webkit-transition: fill var(--transition);
+  -moz-transition: fill var(--transition);
+  -ms-transition: fill var(--transition);
+  -o-transition: fill var(--transition);
+
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
+
+.secondWave {
+  position: absolute;
+  top: 0;
+  height: 80px;
+  width: 100%;
+  fill: var(--highlight-clr);
+
+  transition: fill var(--transition);
+  -webkit-transition: fill var(--transition);
+  -moz-transition: fill var(--transition);
+  -ms-transition: fill var(--transition);
+  -o-transition: fill var(--transition);
+} */
+
+@media (min-width: 600px) {
+  .text {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+
+  .animationBox {
+    left: calc(var(--padding) + 2.5rem);
+    width: fit-content;
+    top: 6rem;
+  }
+
+  .h1 {
+    font-size: var(--fs-900);
+  }
+
+  .h2 {
+    font-size: var(--fs-900);
+  }
+
+  /* .firstWave {
+    height: 132px;
+  }
+
+  .secondWave {
+    height: 151px;
+  } */
+}
+
+@media (min-width: 1000px) {
+  .article {
+    flex-direction: row;
+    align-items: unset;
+  }
+}
+

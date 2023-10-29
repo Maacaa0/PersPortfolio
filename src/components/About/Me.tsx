@@ -1,22 +1,27 @@
-// import React from 'react'
+import styles from "./me.module.css"
+import { LangProps } from "../../App"
 
-const Me = () => {
+const Me = ({ lang }: LangProps) => {
   return (
-    <article className="typewriter">
-        <div className="box">
-            <div className="front">
-                <h2>Hello World!</h2>
+    <section className={styles.animationSection}>
+    <article className={styles.animationBox}>
+        <div className={styles.wrapper}>
+            <div className={styles.front}>
+                <h2 className={styles.h2}>Hello World!</h2>
             </div>
-            <div className="back">
-                <p>I am</p>
-                <h1>Marcel Hess</h1>
+            <div className={styles.back}>
+                <p>{lang === "en" ? "I am" : "Jsem"}</p>
+                <h1 className={styles.h1}>Marcel Hess</h1>
             </div>
-            <div className="right"></div>
-            <div className="left"></div>
-            <div className="top"></div>
-            <div className="bottom"></div>
+            <div className={styles.right}></div>
+            <div className={styles.left}></div>
+            <div className={styles.top}></div>
+            <div className={styles.bottom}></div>
         </div>
     </article>
+      <h2 className={styles.dev}>{lang === "en" ? "Junior Frontend Developer" : "Junior Frontend Vývojář"}</h2>
+      <a href="#about" className={styles.downArrow}></a>
+    </section>
   )
 }
 

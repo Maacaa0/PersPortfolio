@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { projectDataCZ } from "./projectData";
 import { projectDataEN } from "./projectData";
 import { LangProps } from "../../App";
+import styles from "./projects.module.css"
 
 const Projects: React.FC<LangProps> = ({ lang }) => {
   const [projectArr, setProjectArr] = useState(lang === "en" ? projectDataEN : projectDataCZ);
@@ -34,24 +35,24 @@ const Projects: React.FC<LangProps> = ({ lang }) => {
         onClick={() => toggleProject(project.id)}
         className={
           project.id % 2 === 0
-            ? "project_container"
-            : "project_container reversed"
+            ? styles.container
+            : styles.container__reversed
         }
         key={project.id}
       >
-        <div className="project_image">
+        <div className={styles.image}>
           <img
-            className="project_img"
+            className={styles.img}
             src={project.imgSrc}
             alt="project image"
           />
         </div>
-        <div className="project_info">
+        <div className={styles.info}>
           <div>
-            <h3 className="project_name">{project.projectName}</h3>
-            <small className="project_info_text">{project.projectInfo}</small>
+            <h3 className={styles.name}>{project.projectName}</h3>
+            <small className={styles.info__text}>{project.projectInfo}</small>
           </div>
-          <small className="created_with">
+          <small className={styles.created}>
             {lang === "en" ? "Created with:" : "Vytvořeno pomocí:"}
             <br />
             {project.buildWith}
@@ -68,39 +69,38 @@ const Projects: React.FC<LangProps> = ({ lang }) => {
     return (
       <div key={project.id}>
         {project.isShown && (
-          <div onClick={closeProject} className="overlay_page"></div>
+          <div onClick={closeProject} className={styles.overlay}></div>
         )}
         {project.isShown && (
           <div
             onClick={() => toggleProject(project.id)}
-            className="shown_project"
+            className={styles.card}
           >
-            <h3 className="shown_project_name">{project.projectName}</h3>
+            <h3 className={styles.card__name}>{project.projectName}</h3>
             <img
-              className="shown_project_img"
+              className={styles.card__img}
               src={project.imgSrc}
               alt="project image"
             />
-            <div className="shown_project_bottom_container">
-              <small className="shown_project_info">
+            <div className={styles.card__bottom}>
+              <small className={styles.card__info}>
                 {project.projectInfo}
                 <br />
                 <br />
-                <small className="shown_created_with">
+                <small className={styles.card__created}>
                   {lang === "en" ? "Created with:" : "Vytvořeno pomocí:"}
                   <br />
                   {project.buildWith}
                 </small>
               </small>
 
-              <div className="project_links_container">
+              <div className={styles.card__links__wrapper}>
                 <a
                   href={project.liveSite}
                   target="_blank"
-                  className="project_live_site"
                 >
                   <img
-                    className="link_ico"
+                    className={styles.card__icon}
                     src="images/link.svg"
                     alt="link icon"
                   />
@@ -108,7 +108,7 @@ const Projects: React.FC<LangProps> = ({ lang }) => {
                 </a>
                 <a href={project.repo} target="_blank" className="project_repo">
                   <img
-                    className="link_ico"
+                    className={styles.card__icon}
                     src="images/ghlink.svg"
                     alt="link icon"
                   />
@@ -123,18 +123,18 @@ const Projects: React.FC<LangProps> = ({ lang }) => {
   });
 
   return (
-    <section className="section-2">
-      <div className="projects_top_wrapper">
-        <p className="projects_text">
+    <section className={styles.section}>
+      <div className={styles.text}>
+        <p>
           {lang === "en"
             ? "Projects I coded to practice and harden my skills."
             : "Projekty, které jsem vytvořil, abych procvičil své dovednosti."}
         </p>
-        <small className="highlightnt highlight">
+        <small className={styles.highlight}>
           {lang === "en" ? "Click / Tap on project card to show more info" : "Kliknutím / klepnutím na kartu projektu zobrazíte více informací"}
         </small>
       </div>
-      <div className="projects_wrapper">{projects}</div>
+      <div className={styles.wrapper}>{projects}</div>
       {projectCard}
     </section>
   );

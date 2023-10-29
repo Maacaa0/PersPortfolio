@@ -1,8 +1,8 @@
-import Navbar from './components/Navbar'
+import Navbar from './components/Navbar/Navbar'
 import About from './components/About/About';
 import Projects from './components/Projects/Projects';
 import Skills from './components/Skills/Skills';
-import Footer from './components/Footer';
+import Footer from './components/Footer/Footer';
 import './index.css'
 import useLocalStorage from './hooks/useLocalStorage';
 

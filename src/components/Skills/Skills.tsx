@@ -1,7 +1,9 @@
 import { useState } from "react";
+
 import skillSet from "./skillSet";
 import { codeIcon, lightBulbIcon } from "../Icons";
 import { LangProps } from "../../App";
+import styles from "./skills.module.css";
 
 interface SkillsProps {
   imgSrc: string;
@@ -28,15 +30,15 @@ const Skills = ({ lang }: LangProps) => {
 
   const skills = stackData.map((skill, i) => (
     <div
-      className="ico_wrapper"
+      className={styles.icon}
       key={i}
       id={skill.text}
       onMouseEnter={() => handleMouseEnter(skill.text)}
       onMouseLeave={() => handleMouseLeave()}
     >
-      {skill.show && <small className="icon_name">{skill.text}</small>}
+      {skill.show && <small className={styles.icon__name}>{skill.text}</small>}
       <img
-        className="skills_icon"
+        className={styles.icon__image}
         src={skill.imgSrc}
         alt={`${skill.text} icon`}
       />
@@ -44,18 +46,18 @@ const Skills = ({ lang }: LangProps) => {
   ));
 
   return (
-    <article className="skills_article">
-      <div className="svg_wrapper">
+    <article className={styles.article}>
+      <div className={styles.flex}>
         {codeIcon}
-        <div className="text">
+        <div className={styles.text}>
           {lang === "en" ? (
             <>
               I started learning front-end development in early 2022. I've been
-              using <span className="highlight_red">YouTube</span> tutorials and{" "}
+              using YouTube tutorials and{" "}
               <a
                 target="_blank"
                 href="https://www.freecodecamp.org/"
-                className="highlight"
+                className={styles.highlight}
               >
                 FreeCodeCamp
               </a>{" "}
@@ -63,7 +65,7 @@ const Skills = ({ lang }: LangProps) => {
               <a
                 target="_blank"
                 href="https://www.frontendmentor.io/challenges"
-                className="highlight"
+                className={styles.highlight}
               >
                 Frontend Mentor
               </a>{" "}
@@ -71,7 +73,7 @@ const Skills = ({ lang }: LangProps) => {
               <a
                 target="_blank"
                 href="https://www.codewars.com/users/Maacaa0"
-                className="highlight"
+                className={styles.highlight}
               >
                 Codewars
               </a>
@@ -80,13 +82,12 @@ const Skills = ({ lang }: LangProps) => {
           ) : (
             <>
               Front-end jsem se začal učit na začátku roku 2022. K učení
-              používám výukové videa na{" "}
-              <span className="highlight_red">YouTube</span> a také procvičuji
-              své dovednosti s výzvami od{" "}
+              používám výukové videa na YouTube a také procvičuji své dovednosti
+              s výzvami od{" "}
               <a
                 target="_blank"
                 href="https://www.freecodecamp.org/"
-                className="highlight"
+                className={styles.highlight}
               >
                 FreeCodeCamp
               </a>
@@ -94,7 +95,7 @@ const Skills = ({ lang }: LangProps) => {
               <a
                 target="_blank"
                 href="https://www.frontendmentor.io/challenges"
-                className="highlight"
+                className={styles.highlight}
               >
                 Frontend Mentor
               </a>{" "}
@@ -102,25 +103,25 @@ const Skills = ({ lang }: LangProps) => {
               <a
                 target="_blank"
                 href="https://www.codewars.com/users/Maacaa0"
-                className="highlight"
+                className={styles.highlight}
               >
                 Codewars
               </a>
               .
             </>
           )}
-          <div className="icons_container">{skills}</div>
+          <div className={styles.icon__wrapper}>{skills}</div>
         </div>
       </div>
 
-      <div className="svg_wrapper">
+      <div className={styles.flex}>
         {lightBulbIcon}
-        <p className="text">
+        <p className={styles.text}>
           {lang === "en" ? (
             <>
-              I have learned <span className="highlight">HTML</span>,{" "}
-              <span className="highlight">CSS</span>, and{" "}
-              <span className="highlight">Javascript</span> essentials. Now I am
+              I have learned <span className={styles.highlight}>HTML</span>,{" "}
+              <span className={styles.highlight}>CSS</span>, and{" "}
+              <span className={styles.highlight}>Javascript</span> essentials. Now I am
               on a path to learn React with Typescript and Git to take my skills
               to the next level.
               <br /> <br /> I understand, there is so much I don't know yet, but
@@ -128,10 +129,13 @@ const Skills = ({ lang }: LangProps) => {
             </>
           ) : (
             <>
-              Naučil jsem se základy <span className="highlight">HTML</span>,{" "}
-              <span className="highlight">CSS</span>, a{" "}
-              <span className="highlight">Javascriptu</span>. Nyní se věnuji Reactu s Typescriptem a učím se pracovat s Gitem abych své dovednosti posunul na další úroveň.
-              <br /> <br /> Rozumím, že je toho mnoho, co ještě nevím, ale jsem namotivovaný se učit a prozkoumávat nové možnosti.
+              Naučil jsem se základy <span className={styles.highlight}>HTML</span>,{" "}
+              <span className={styles.highlight}>CSS</span>, a{" "}
+              <span className={styles.highlight}>Javascriptu</span>. Nyní se věnuji
+              Reactu s Typescriptem a učím se pracovat s Gitem abych své
+              dovednosti posunul na další úroveň.
+              <br /> <br /> Rozumím, že je toho mnoho, co ještě nevím, ale jsem
+              namotivovaný se učit a prozkoumávat nové možnosti.
             </>
           )}
         </p>

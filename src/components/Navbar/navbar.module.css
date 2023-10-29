@@ -1,0 +1,143 @@
+.nav {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  white-space: nowrap;
+
+  list-style: none;
+  color: var(--text-clr);
+  padding: 0.5rem 1rem;
+
+  left: 50%;
+  top: 0;
+  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  -o-transform: translate(-50%);
+  -webkit-backface-visibility: hidden;
+}
+
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.langBtn {
+  color: var(--text-clr);
+  font-weight: 400;
+  appearance: none;
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.themeBtn {
+  appearance: none;
+  background: none;
+  border: none;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.themeBtn > svg {
+    width: 100%;
+    height: 100%;
+    fill: var(--text-clr);
+    transition: 250ms ease-in;
+    -webkit-transition: 250ms ease-in;
+    -moz-transition: 250ms ease-in;
+    -ms-transition: 250ms ease-in;
+    -o-transition: 250ms ease-in;
+  }
+
+.icons {
+  z-index: 100;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon {
+  display: block;
+  width: 1.6rem;
+  height: 1.6rem;
+  transition: 250ms ease-in-out;
+  -webkit-transition: 250ms ease-in-out;
+  -moz-transition: 250ms ease-in-out;
+  -ms-transition: 250ms ease-in-out;
+  -o-transition: 250ms ease-in-out;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.icon:hover {
+  filter: drop-shadow(1px 1px 3px rgba(177, 177, 177, 0.632));
+  -webkit-filter: drop-shadow(1px 1px 3px rgba(177, 177, 177, 0.632));
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  opacity: 1;
+}
+
+.icon:focus {
+  outline: 1px solid;
+}
+
+.confirmation {
+  position: absolute;
+  padding: 0.2rem 0.5rem;
+  background: var(--text-clr);
+  font-size: 0.6rem;
+  border-radius: 0.3rem;
+  top: 1rem;
+  left: 7.5rem;
+  color: var(--bg-primary);
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+}
+
+@media (min-width: 600px) {
+  .confirmation {
+    top: 1.25rem;
+    left: 8.9rem;
+  }
+
+  .themeBtn {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .themeBtn {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .confirmation {
+    top: 1.5rem;
+    left: 10.5rem;
+  }
+}
