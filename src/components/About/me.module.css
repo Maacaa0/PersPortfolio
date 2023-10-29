@@ -13,7 +13,7 @@
   width: 100%;
   overflow: hidden;
   margin-top: 3.5rem;
-  padding-left: calc(var(--padding) + 2rem);
+  /* padding-left: calc(var(--padding) + 2rem); */
   padding: 2rem calc(var(--padding) + 2rem);
   border: var(--inicials-border);
 
@@ -142,7 +142,7 @@
 
 .downArrow {
   position: absolute;
-  top: calc(100vh - 200px);
+  top: calc(100vh - 250px);
   width: 0;
   height: 50px;
   border: 2px solid;
