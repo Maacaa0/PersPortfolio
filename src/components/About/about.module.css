@@ -5,11 +5,13 @@
   justify-content: center;
   gap: 2.5rem;
   padding: 2rem;
-  padding-bottom: 4rem;
+  padding-bottom: 6rem;
   padding-top: 4rem;
   position: relative;
   z-index: 50;
   background: var(--bg-primary);
+
+  /* box-shadow: 0px -20px 20px var(--highlight-clr); */
 }
 
 .flex {
