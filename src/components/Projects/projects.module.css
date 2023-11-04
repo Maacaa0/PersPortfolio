@@ -22,7 +22,7 @@
 .highlight {
   color: var(--highlight-clr);
   font-weight: 400;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .container {
@@ -35,11 +35,12 @@
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 
   overflow: hidden;
-}
 
-.container:hover,
-.container__reversed:hover {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  background: transparent;
+  align-items: stretch;
+  color: inherit;
+  font-family: inherit;
+  text-align: left;
 }
 
 .container__reversed {
@@ -48,11 +49,22 @@
   border: 2px outset var(--text-clr);
   cursor: pointer;
   max-width: 50rem;
-
+  
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-
+  
   overflow: hidden;
+  
+  background: transparent;
+  align-items: stretch;
+  color: inherit;
+  font-family: inherit;
+  text-align: left;
+}
+
+.container:hover,
+.container__reversed:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .name {
@@ -88,7 +100,7 @@
 .created {
   display: none;
   color: var(--text-clr);
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .overlay {
@@ -163,7 +175,7 @@
   color: var(--text-clr);
   margin-bottom: 1rem;
   display: block;
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .card__links__wrapper {
@@ -201,9 +213,10 @@
     -o-transform: translateY(-0.3rem);
   }
 
-  .container:hover .image, .container__reversed:hover .image {
-    filter: blur(0px) brightness(.8);
-    -webkit-filter: blur(0px) brightness(.8);
+  .container:hover .image,
+  .container__reversed:hover .image {
+    filter: blur(0px) brightness(0.8);
+    -webkit-filter: blur(0px) brightness(0.8);
     transition: filter 250ms ease;
     -webkit-transition: filter 250ms ease;
     -moz-transition: filter 250ms ease;
@@ -211,7 +224,8 @@
     -o-transition: filter 250ms ease;
   }
 
-  .bottom, .name {
+  .bottom,
+  .name {
     font-size: 1.2rem;
   }
 
@@ -223,14 +237,13 @@
     padding: 1.5rem;
   }
 
-
   .info__text {
     font-size: 1rem;
   }
 
   .image {
-    filter: blur(1px) brightness(.5);
-    -webkit-filter: blur(1px) brightness(.5);
+    filter: blur(1px) brightness(0.5);
+    -webkit-filter: blur(1px) brightness(0.5);
   }
 
   .created {
@@ -311,11 +324,14 @@ th {
   color: var(--highlight-clr);
 }
 
-table, th, td {
+table,
+th,
+td {
   border: 1px solid var(--text-clr);
 }
 
-th, td {
+th,
+td {
   padding: 12px;
   text-align: left;
 }

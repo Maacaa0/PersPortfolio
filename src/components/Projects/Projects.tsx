@@ -33,7 +33,7 @@ const Projects: React.FC<LangProps> = ({ lang }) => {
 
   const projects = projectArr.map((project) => {
     return (
-      <div
+      <button
         onClick={() => toggleProject(project.id)}
         className={
           project.id % 2 === 0 ? styles.container : styles.container__reversed
@@ -58,7 +58,7 @@ const Projects: React.FC<LangProps> = ({ lang }) => {
             {project.buildWith}
           </small>
         </div>
-      </div>
+      </button>
     );
   });
 
