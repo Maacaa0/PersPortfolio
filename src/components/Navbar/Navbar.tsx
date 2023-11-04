@@ -62,8 +62,8 @@ const Navbar: React.FC<NavbarProps> = ({ toggleLanguage, lang }) => {
               : "E-mail zkopírován do schránky!"}
           </div>
         )}
-        <a
-          className={styles.icon}
+        <button
+          className={styles.copyBtn}
           onClick={copyToClipBoard}
           aria-label={
             lang === "en"
@@ -72,7 +72,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleLanguage, lang }) => {
           }
         >
           {emailIcon}
-        </a>
+        </button>
 
         <a
           href="https://github.com/Maacaa0"
