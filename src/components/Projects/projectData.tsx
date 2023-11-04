@@ -75,7 +75,7 @@ export const projectDataEN = [
     {
       id: 4,
       projectName: "Vlajky Zemí",
-      projectInfo: "Načítání dat z api, filtrování podle regionů, vyhledávání, tmavý/světlý řežim.",
+      projectInfo: "Načítání dat z api, filtrování podle regionů, vyhledávání, tmavý/světlý režim.",
       repo: "https://github.com/Maacaa0/Countries-Project",
       liveSite: "https://adorable-gumdrop-143edc.netlify.app",
       imgSrc: "/images/flags.png",

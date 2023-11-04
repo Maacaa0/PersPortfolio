@@ -24,7 +24,7 @@ const Me = ({ lang }: LangProps) => {
           ? "Junior Frontend Developer"
           : "Junior Frontend Vývojář"}
       </h2>
-      <a href="#about" className={styles.downArrow}></a>
+      <a href="#about" className={styles.downArrow} aria-disabled="true" tabIndex={-1}></a>
     </section>
   );
 };
