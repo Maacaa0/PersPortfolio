@@ -9,11 +9,14 @@ type NavbarProps = {
 };
 
 const Navbar: React.FC<NavbarProps> = ({ toggleLanguage, lang }) => {
+
+  const userPrefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
   const [darkTheme, setDarkTheme] = useLocalStorage({
     key: "darkMode",
-    initialValue: false,
+    initialValue: userPrefersDarkMode || false,
   });
-
+  
   const toggleTheme = () => {
     setDarkTheme(!darkTheme);
   };
@@ -27,15 +30,6 @@ const Navbar: React.FC<NavbarProps> = ({ toggleLanguage, lang }) => {
       ? document.documentElement.style.setProperty("--text-clr", "#f7faff")
       : document.documentElement.style.setProperty("--text-clr", "#25272b");
 
-    // darkTheme
-    //   ? document.documentElement.style.setProperty(
-    //       "--bg-image",
-    //       "url('/images/dark.svg')"
-    //     )
-    //   : document.documentElement.style.setProperty(
-    //       "--bg-image",
-    //       "url('/images/light.svg')"
-    //     );
   }, [darkTheme]);
 
   const [isCopied, setIsCopied] = useState<boolean>(false);
