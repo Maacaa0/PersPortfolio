@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { ghIcon, emailIcon, linkedInIcon, moonIcon, sunIcon } from "../Icons";
-import styles from "./navbar.module.css"
+import styles from "./navbar.module.css";
 import useLocalStorage from "../../hooks/useLocalStorage";
 
 type NavbarProps = {
-  toggleLanguage: () => void,
-  lang: string
-}
+  toggleLanguage: () => void;
+  lang: string;
+};
 
-const Navbar: React.FC<NavbarProps> = ({toggleLanguage, lang}) => {
+const Navbar: React.FC<NavbarProps> = ({ toggleLanguage, lang }) => {
   const [darkTheme, setDarkTheme] = useLocalStorage({
     key: "darkMode",
     initialValue: false,
@@ -56,9 +56,21 @@ const Navbar: React.FC<NavbarProps> = ({toggleLanguage, lang}) => {
     <nav className={styles.nav}>
       <div className={styles.icons}>
         {isCopied && (
-          <div className={styles.confirmation}>{lang === "en" ? "E-mail copied to clipboard!" : "E-mail zkopírován do schránky!"}</div>
+          <div className={styles.confirmation}>
+            {lang === "en"
+              ? "E-mail copied to clipboard!"
+              : "E-mail zkopírován do schránky!"}
+          </div>
         )}
-        <a className={styles.icon} onClick={copyToClipBoard}>
+        <a
+          className={styles.icon}
+          onClick={copyToClipBoard}
+          aria-label={
+            lang === "en"
+              ? "copy email"
+              : "zkopírovat email"
+          }
+        >
           {emailIcon}
         </a>
 
@@ -66,6 +78,7 @@ const Navbar: React.FC<NavbarProps> = ({toggleLanguage, lang}) => {
           href="https://github.com/Maacaa0"
           target="_blank"
           className={styles.icon}
+          aria-label="github profile link"
         >
           {ghIcon}
         </a>
@@ -73,13 +86,32 @@ const Navbar: React.FC<NavbarProps> = ({toggleLanguage, lang}) => {
           href="https://www.linkedin.com/in/marcel-hess-35a081257/"
           target="_blank"
           className={styles.icon}
+          aria-label="linkedin profile link"
         >
           {linkedInIcon}
         </a>
       </div>
       <div className={styles.buttons}>
-        <button onClick={toggleLanguage} className={styles.langBtn}>{lang === "en" ? "CZ" : "EN"}</button>
-        <button onClick={toggleTheme} className={styles.themeBtn}>
+        <button
+          onClick={toggleLanguage}
+          className={styles.langBtn}
+          aria-label={
+            lang === "en"
+              ? "toggle czech/english language"
+              : "přepnout jazyk český/anglický"
+          }
+        >
+          {lang === "en" ? "CZ" : "EN"}
+        </button>
+        <button
+          onClick={toggleTheme}
+          className={styles.themeBtn}
+          aria-label={
+            lang === "en"
+              ? "toggle dark/light theme"
+              : "přepnout tmavý/světlý režim"
+          }
+        >
           {darkTheme ? sunIcon : moonIcon}
         </button>
       </div>
