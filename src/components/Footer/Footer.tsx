@@ -30,10 +30,10 @@ const Footer: React.FC = () => {
           {fbIcon}
         </a>
       </div>
-      <a href="mailto:hesss.marcel@gmail.com" aria-label="Email">
+      <a href="mailto:hesss.marcel@gmail.com">
         hesss.marcel@gmail.com
       </a>
-      <a href="tel:+420739254332" aria-label="Phone number">
+      <a href="tel:+420739254332">
         +420 739 254 332
       </a>
       <small className={styles.copyright}>
