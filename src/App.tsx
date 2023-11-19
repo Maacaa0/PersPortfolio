@@ -16,7 +16,6 @@ function App() {
     initialValue: "cz",
   });
 
-
   function toggleLanguage() {
     setLang(lang === "en" ? "cz" : "en");
   }
